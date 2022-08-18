@@ -1,0 +1,20 @@
+---
+id: qjd1g9g07jjf20wvuzkuum2
+title: Python Interactive
+desc: ''
+updated: 1660824078444
+created: 1660824078444
+isDir: false
+Order: 4
+Area: datascience
+TOCTitle: Python Interactive
+ContentId: 09645514-3c23-49ec-8e27-71831bc06ce7
+PageTitle: Working with Jupyter code cells in the Python Interactive window
+DateApproved: 8/4/2022
+MetaDescription: Working with Jupyter code cells in the Python Interactive window
+MetaSocialImage: images/tutorial/social.png
+---
+
+# How to use Python Interactive in Jupyter
+
+This page is redirected to /docs/python/jupyter-support-py.md and only exists to keep the "Python Interactive" TOC item.
