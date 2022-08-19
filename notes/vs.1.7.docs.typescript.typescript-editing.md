@@ -117,7 +117,7 @@ As with the references CodeLens, you can click on the implementation count to qu
 
 Automatic imports speed up coding by helping you find available symbols and automatically adding imports for them.
 
-Just start typing to see [[vs.1.7.#intellisense]] for all available TypeScript symbols in your current project.
+Just start typing to see [intellisense](#intellisense) for all available TypeScript symbols in your current project.
 
 ![Global symbols are shown in the suggestion list](/assets/auto-import-pre-8galz4mnv8hw.png)
 
@@ -143,7 +143,7 @@ Set `"typescript.autoClosingTags"` to `false` to disable JSX tag closing.
 
 ## JSDoc support
 
-VS Code's TypeScript IntelliSense understands many standard [JSDoc](https://jsdoc.app) annotations, and uses them to show typing information and documentation in [[vs.1.7.#intellisense]], [[vs.1.7.#hover-information]], and [[vs.1.7.#signature-help]].
+VS Code's TypeScript IntelliSense understands many standard [JSDoc](https://jsdoc.app) annotations, and uses them to show typing information and documentation in [intellisense](#intellisense), [hover-information](#hover-information), and [signature-help](#signature-help).
 
 ![TypeScript language within VS Code](/assets/jsdocs-er8xk381dh6o.png)
 

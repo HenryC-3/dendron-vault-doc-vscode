@@ -74,7 +74,7 @@ You must specify an identifier and name for the view, and you can contribute to 
 - `debug`: Run and Debug view in the Side Bar
 - `scm`: Source Control view in the Side Bar
 - `test`: Test explorer view in the Side Bar
-- [[vs.1.7.#view-container]]
+- [view-container](#view-container)
 
 ### Tree Data Provider
 

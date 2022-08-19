@@ -29,7 +29,7 @@ SSH is powerful and flexible, but this also adds some setup complexity. This sec
 
 [SSH public key authentication](https://www.ssh.com/ssh/public-key-authentication) is a convenient, high security authentication method that combines a local "private" key with a "public" key that you associate with your user account on an SSH host. This section will walk you through how to generate these keys and add them to a host.
 
-> **Tip:** PuTTY for Windows is not a [[vs.1.7.#installing-a-supported-ssh-client]], but you can [[vs.1.7.#reusing-a-key-generated-in-puttygen]].
+> **Tip:** PuTTY for Windows is not a [installing-a-supported-ssh-client](#installing-a-supported-ssh-client), but you can [reusing-a-key-generated-in-puttygen](#reusing-a-key-generated-in-puttygen).
 
 ### Quick start: Using SSH keys
 
@@ -45,7 +45,7 @@ If you do not have a key, run the following command in a **local** terminal / Po
 ssh-keygen -t rsa -b 4096
 ```
 
-> **Tip:** Don't have `ssh-keygen`? Install [[vs.1.7.#installing-a-supported-ssh-client]].
+> **Tip:** Don't have `ssh-keygen`? Install [installing-a-supported-ssh-client](#installing-a-supported-ssh-client).
 
 **Authorize your macOS or Linux machine to connect**
 
@@ -113,7 +113,7 @@ While using a single SSH key across all your SSH hosts can be convenient, if any
     ssh-keygen -t ed25519 -f "$HOME\.ssh\id_ed25519-remote-ssh"
     ```
 
-2. Follow the same steps in the [[vs.1.7.#quick-start-using-ssh-keys]] to authorize the key on the SSH host, but set the `PUBKEYPATH` to the `id_ed25519-remote-ssh.pub` file instead.
+2. Follow the same steps in the [quick-start-using-ssh-keys](#quick-start-using-ssh-keys) to authorize the key on the SSH host, but set the `PUBKEYPATH` to the `id_ed25519-remote-ssh.pub` file instead.
 
 3. In VS Code, run **Remote-SSH: Open Configuration File...** in the Command Palette (`kbstyle(F1)`), select an SSH config file, and add (or modify) a host entry as follows:
 
@@ -148,7 +148,7 @@ The Remote - SSH extension installs and maintains the "VS Code Server". The serv
 
 By default, the server listens to `localhost` on a random TCP port that is then forwarded to your local machine. If you are connecting to a **Linux or macOS** host, you can switch to using Unix sockets that are locked down to a particular user. This socket is then forwarded instead of the port.
 
-> **Note:** This setting **disables connection multiplexing** so configuring [[vs.1.7.#configuring-key-based-authentication]] is recommended.
+> **Note:** This setting **disables connection multiplexing** so configuring [configuring-key-based-authentication](#configuring-key-based-authentication) is recommended.
 
 To configure it:
 
@@ -254,7 +254,7 @@ Some users launch a different shell from their `.bash_profile` or other startup 
 
 Some systems will dynamically route an SSH connection to one node from a cluster each time an SSH connection is made. This is an issue for VS Code because it makes two connections to open a remote window: the first to install or start the VS Code Server (or find an already running instance) and the second to create the SSH port tunnel that VS Code uses to talk to the server. If VS Code is routed to a different machine when it creates the second connection, it won't be able to talk to the VS Code server.
 
-One workaround for this is to use the `ControlMaster` option in OpenSSH (macOS/Linux clients only), described in [[vs.1.7.#enabling-alternate-ssh-authentication-methods]], so that VS Code's two connections will be multiplexed through a single SSH connection to the same node.
+One workaround for this is to use the `ControlMaster` option in OpenSSH (macOS/Linux clients only), described in [enabling-alternate-ssh-authentication-methods](#enabling-alternate-ssh-authentication-methods), so that VS Code's two connections will be multiplexed through a single SSH connection to the same node.
 
 **Contact your system administrator for configuration help**
 
@@ -270,7 +270,7 @@ If you are connecting to an SSH remote host and are either:
 
 * Connecting with two-factor authentication
 * Using password authentication
-* Using an SSH key with a passphrase when the [[vs.1.7.#setting-up-the-ssh-agent]] is not running or accessible
+* Using an SSH key with a passphrase when the [setting-up-the-ssh-agent](#setting-up-the-ssh-agent) is not running or accessible
 
 then VS Code should automatically prompt you to enter needed information. If you do not see the prompt, enable the `remote.SSH.showLoginTerminal` [[vs.1.7.docs.getstarted.settings]] in VS Code. This setting displays the terminal whenever VS Code runs an SSH command. You can then enter your authentication code, password, or passphrase when the terminal appears.
 
@@ -430,7 +430,7 @@ Either use an SSH key without a passphrase, clone using HTTPS, or run `git push`
 
 [SSHFS](https://en.wikipedia.org/wiki/SSHFS) is a secure remote filesystem access protocol that builds up from SFTP. It provides advantages over something like a CIFS / Samba share in that all that is required is SSH access to the machine.
 
-> **Note:** For performance reasons, SSHFS is best used for single file edits and uploading/downloading content. If you need to use an application that bulk reads/write to many files at once (like a local source control tool), [[vs.1.7.#using-rsync-to-maintain-a-local-copy-of-your-source-code]] is a better choice.
+> **Note:** For performance reasons, SSHFS is best used for single file edits and uploading/downloading content. If you need to use an application that bulk reads/write to many files at once (like a local source control tool), [using-rsync-to-maintain-a-local-copy-of-your-source-code](#using-rsync-to-maintain-a-local-copy-of-your-source-code) is a better choice.
 
 **macOS / Linux**:
 
@@ -461,7 +461,7 @@ umount "$HOME/sshfs/$USER_AT_HOST"
 
 Follow these steps:
 
-1. On Linux, add `.gitattributes` file to your project to **force consistent line endings** between Linux and Windows to avoid unexpected issues due to CRLF/LF differences between the two operating systems. See [[vs.1.7.#resolving-git-line-ending-issues-in-wsl-resulting-in-many-modified-files]] for details.
+1. On Linux, add `.gitattributes` file to your project to **force consistent line endings** between Linux and Windows to avoid unexpected issues due to CRLF/LF differences between the two operating systems. See [resolving-git-line-ending-issues-in-wsl-resulting-in-many-modified-files](#resolving-git-line-ending-issues-in-wsl-resulting-in-many-modified-files) for details.
 
 2. Next, install [SSHFS-Win](https://github.com/billziss-gh/sshfs-win) using [Chocolatey](https://chocolatey.org/): `choco install sshfs`
 
@@ -491,7 +491,7 @@ To force that a file is opened, add `--goto` or use:
 
 ### Using rsync to maintain a local copy of your source code
 
-An alternative to [[vs.1.7.#using-sshfs-to-access-files-on-your-remote-host]] is to [use `rsync`](https://rsync.samba.org/) to copy the entire contents of a folder on remote host to your local machine. The `rsync` command will determine which files need to be updated each time it is run, which is far more efficient and convenient than using something like `scp` or `sftp`. This is primarily something to consider if you really need to use multi-file or performance intensive local tools.
+An alternative to [using-sshfs-to-access-files-on-your-remote-host](#using-sshfs-to-access-files-on-your-remote-host) is to [use `rsync`](https://rsync.samba.org/) to copy the entire contents of a folder on remote host to your local machine. The `rsync` command will determine which files need to be updated each time it is run, which is far more efficient and convenient than using something like `scp` or `sftp`. This is primarily something to consider if you really need to use multi-file or performance intensive local tools.
 
 The `rsync` command is available out of box on macOS and can be installed using Linux package managers (for example `sudo apt-get install rsync` on Debian/Ubuntu). For Windows, you'll need to either use [WSL](https://docs.microsoft.com/windows/wsl/install) or [Cygwin](https://www.cygwin.com/) to access the command.
 
@@ -511,7 +511,7 @@ wsl rsync -rlptzv --progress --delete --exclude=.git "user@hostname:/remote/sour
 
 You can rerun this command each time you want to get the latest copy of your files and only updates will be transferred. The `.git` folder is intentionally excluded both for performance reasons and so you can use local Git tools without worrying about the state on the remote host.
 
-To push content, reverse the source and target parameters in the command. However, **on Windows** you should add a `.gitattributes` file to your project to **force consistent line endings** before doing so. See [[vs.1.7.#resolving-git-line-ending-issues-in-wsl-resulting-in-many-modified-files]] for details.
+To push content, reverse the source and target parameters in the command. However, **on Windows** you should add a `.gitattributes` file to your project to **force consistent line endings** before doing so. See [resolving-git-line-ending-issues-in-wsl-resulting-in-many-modified-files](#resolving-git-line-ending-issues-in-wsl-resulting-in-many-modified-files) for details.
 
 ```bash
 rsync -rlptzv --progress --delete --exclude=.git . "user@hostname:/remote/source/code/path"
@@ -710,7 +710,7 @@ This is a [well known issue](https://github.com/debuerreotype/docker-debian-arti
 
 There are two ways to resolve this error:
 
-* **Option 1**: Remove any containers that depend on the image, remove the image, and then try building again. This should download an updated image that is not affected by the problem. See [[vs.1.7.#cleaning-out-unused-containers-and-images]] for details.
+* **Option 1**: Remove any containers that depend on the image, remove the image, and then try building again. This should download an updated image that is not affected by the problem. See [cleaning-out-unused-containers-and-images](#cleaning-out-unused-containers-and-images) for details.
 
 * **Option 2**: If you don't want to delete your containers or images, add this line into your Dockerfile before any `apt` or `apt-get` command. It adds the needed source lists for Jessie:
 

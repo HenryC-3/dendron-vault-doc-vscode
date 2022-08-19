@@ -35,7 +35,7 @@ To get started, you need to:
 
 1. Install the [Windows Subsystem for Linux](https://docs.microsoft.com/windows/wsl/install) along with your preferred Linux distribution.
 
-    > **Note:** WSL 1 does have some [[vs.1.7.#known-limitations]] for certain types of development. Also, extensions installed in Alpine Linux may not work due to `glibc` dependencies in native source code inside the extension. See the [Remote Development and Linux](https://aka.ms/vscode-remote/linux) article for details.
+    > **Note:** WSL 1 does have some [known-limitations](#known-limitations) for certain types of development. Also, extensions installed in Alpine Linux may not work due to `glibc` dependencies in native source code inside the extension. See the [Remote Development and Linux](https://aka.ms/vscode-remote/linux) article for details.
 
 2. Install [Visual Studio Code](https://code.visualstudio.com/) on the **Windows** side (not in WSL).
 
@@ -161,7 +161,7 @@ If you are using WSL 2 and [Docker Desktop's WSL 2 back-end](https://docs.docker
 
 2. If you have not already, install the [Remote - Containers](https://aka.ms/vscode-remote/download/containers) extension along with the WSL extension.
 
-3. Next, [[vs.1.7.#open-a-remote-folder-or-workspace]] as you would normally.
+3. Next, [open-a-remote-folder-or-workspace](#open-a-remote-folder-or-workspace) as you would normally.
 
 4. Once your folder is open in WSL, select **Remote-Containers: Reopen Folder in Container** from the Command Palette (`kbstyle(F1)`).
 

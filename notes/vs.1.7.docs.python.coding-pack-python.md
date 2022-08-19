@@ -39,7 +39,7 @@ With the Coding Pack for Python, it's easy to get started developing with Python
 
    ![Coding Pack for Python installation complete screen](/assets/coding-pack-python-install-03-sre70gls8dsa.png)
 
->**Note**: If there are any issues installing components, you can use the steps discussed in [[vs.1.7.#manual-installation]]
+>**Note**: If there are any issues installing components, you can use the steps discussed in [manual-installation](#manual-installation)
 
 ## What's installed by the Coding Pack for Python
 
@@ -136,7 +136,7 @@ To help you get started quickly, the Coding Pack for Python sets a few key setti
 
 #### Set language server to pylance
 
-1. Install the Pylance extension and set it as the default language server as described in the [[vs.1.7.#pylance-language-server-extension]].
+1. Install the Pylance extension and set it as the default language server as described in the [pylance-language-server-extension](#pylance-language-server-extension).
 
 #### Enable running scripts in PowerShell
 

@@ -101,7 +101,7 @@ There are filters to show:
 * The list of recommended extensions based on your workspace
 * The list of globally popular extensions
 
-You can sort the extension list by **Install Count** or **Rating** in either ascending or descending order. You can learn more about extension search filters [[vs.1.7.#extensions-view-filters]].
+You can sort the extension list by **Install Count** or **Rating** in either ascending or descending order. You can learn more about extension search filters [extensions-view-filters](#extensions-view-filters).
 
 You can run additional Extensions view commands via the `...` **View and More Actions** button.
 
@@ -119,7 +119,7 @@ For example, typing 'python' will bring up a list of Python language extensions:
 
 ![python extensions](/assets/extensions-python-4wbrf9bgmjul.png)
 
-If you know the exact identifier for an extension you're looking for, you can use the `@id:` prefix, for example `@id:octref.vetur`. Additionally, to filter or sort results, you can use the [[vs.1.7.#extensions-view-filters]] and [[vs.1.7.#sorting]] commands, detailed below.
+If you know the exact identifier for an extension you're looking for, you can use the `@id:` prefix, for example `@id:octref.vetur`. Additionally, to filter or sort results, you can use the [extensions-view-filters](#extensions-view-filters) and [sorting](#sorting) commands, detailed below.
 
 ## Manage extensions
 
@@ -161,12 +161,12 @@ If you have extensions auto-update disabled, you can quickly look for extension 
 
 ## Recommended extensions
 
-You can see a list of recommended extensions using **Show Recommended Extensions**, which sets the `@recommended` [[vs.1.7.#extensions-view-filters]]. Extension recommendations can either be:
+You can see a list of recommended extensions using **Show Recommended Extensions**, which sets the `@recommended` [extensions-view-filters](#extensions-view-filters). Extension recommendations can either be:
 
 * **Workspace Recommendations** - Recommended by other users of your current workspace.
 * **Other Recommendations** - Recommended based on recently opened files.
 
-See the section below to learn how to [[vs.1.7.#workspace-recommended-extensions]] recommendations for other users in your project.
+See the section below to learn how to [workspace-recommended-extensions](#workspace-recommended-extensions) recommendations for other users in your project.
 
 ### Ignoring recommendations
 

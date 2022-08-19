@@ -136,7 +136,7 @@ node or the items under it.
 
 ![manage referenced librares](/assets/manage-referenced-libraries-cj0qpqyk6zxg.png)
 
-> You can also manage the dependencies in the classpath configuration page. See: [[vs.1.7.#configure-classpath-for-unmanaged-folders]]
+> You can also manage the dependencies in the classpath configuration page. See: [configure-classpath-for-unmanaged-folders](#configure-classpath-for-unmanaged-folders)
 
 Behind the scene, there's a setting `java.project.referencedLibraries` in `settings.json`. Below are details on how to customize this setting.
 

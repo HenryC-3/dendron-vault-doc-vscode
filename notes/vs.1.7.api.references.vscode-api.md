@@ -20218,7 +20218,7 @@ to get a handle to VS Code&#39;s api and then call <code>.postMessage()</code>:<
     vscode.postMessage({ message: &#39;hello!&#39; });
 &lt;/script&gt;
 </code></pre>
-<p>To load a resources from the workspace inside a webview, use the <code>[[vs.1.7.#Webview.asWebviewUri]]</code> method
+<p>To load a resources from the workspace inside a webview, use the <code>[Webview.asWebviewUri](#Webview.asWebviewUri)</code> method
 and ensure the resource&#39;s directory is listed in <a href="#WebviewOptions.localResourceRoots"><code>WebviewOptions.localResourceRoots</code></a>.</p>
 <p>Keep in mind that even though webviews are sandboxed, they still allow running scripts and loading arbitrary content,
 so extensions must follow all standard web security best practices when working with webviews. This includes
@@ -20958,10 +20958,10 @@ and language-specific values (if <a href="#WorkspaceConfiguration">WorkspaceConf
 </div></td></tr>
 <tr><td><a name="configurationTarget"></a><span class="ts" id=1361 data-target="#details-1361" data-toggle="collapse"><span class="ident">configurationTarget</span><span>?</span><span>: </span><a class="type-ref" href="#ConfigurationTarget">ConfigurationTarget</a> &#124; <a class="type-intrinsic">boolean</a></span></td><td><div class="comment"><p>The <a href="#ConfigurationTarget">configuration target</a> or a boolean value.</p>
 
-<pre><code>- If `true` updates [[vs.1.7.#ConfigurationTarget.Global]].
-- If `false` updates [[vs.1.7.#ConfigurationTarget.Workspace]].
-- If `undefined` or `null` updates to [[vs.1.7.#ConfigurationTarget.WorkspaceFolder]] if configuration is resource specific,
-otherwise to [[vs.1.7.#ConfigurationTarget.Workspace]].
+<pre><code>- If `true` updates [ConfigurationTarget.Global](#ConfigurationTarget.Global).
+- If `false` updates [ConfigurationTarget.Workspace](#ConfigurationTarget.Workspace).
+- If `undefined` or `null` updates to [ConfigurationTarget.WorkspaceFolder](#ConfigurationTarget.WorkspaceFolder) if configuration is resource specific,
+otherwise to [ConfigurationTarget.Workspace](#ConfigurationTarget.Workspace).
 </code></pre></div></td></tr>
 <tr><td><a name="overrideInLanguage"></a><span class="ts" id=1362 data-target="#details-1362" data-toggle="collapse"><span class="ident">overrideInLanguage</span><span>?</span><span>: </span><a class="type-intrinsic">boolean</a></span></td><td><div class="comment"><p>Whether to update the value in the scope of requested languageId or not.</p>
 

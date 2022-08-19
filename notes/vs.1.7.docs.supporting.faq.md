@@ -232,7 +232,7 @@ To work around this, when launched via a UI gesture, VS Code will start a small 
 
 ![Shell environment startup error](/assets/shell-env-error-bd8r92p6vrzb.png)
 
-If the error message indicates that resolving your shell environment took too long, the [[vs.1.7.#investigate-slow-shell-initialization]] can help you investigate what might be causing slowness.
+If the error message indicates that resolving your shell environment took too long, the [investigate-slow-shell-initialization](#investigate-slow-shell-initialization) can help you investigate what might be causing slowness.
 
 If you see other errors, please create an [issue](https://github.com/microsoft/vscode/issues) to get help.
 

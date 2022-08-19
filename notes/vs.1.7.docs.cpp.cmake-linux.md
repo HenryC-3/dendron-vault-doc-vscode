@@ -78,7 +78,7 @@ sudo apt-get install build-essential gdb
 
 ## Create a CMake project
 
-If you have an existing CMake project that already has a `CMakeLists.txt` file in the root directory, you can skip to [[vs.1.7.#select-a-kit]] to configure your existing project.
+If you have an existing CMake project that already has a `CMakeLists.txt` file in the root directory, you can skip to [select-a-kit](#select-a-kit) to configure your existing project.
 
 Otherwise, create a folder for a new project. From the Terminal window, create an empty folder called `cmakeQuickStart`, navigate into it, and open VS Code in that folder by entering the following commands:
 

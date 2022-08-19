@@ -15,7 +15,7 @@ MetaDescription: How to change the display language (locale) of Visual Studio Co
 ---
 # Display Language
 
-Visual Studio Code ships by default with English as the display language and other [[vs.1.7.#available-locales]] rely on Language Pack [[vs.1.7.docs.editor.extension-marketplace]] available from the [Marketplace](https://marketplace.visualstudio.com/search?target=VSCode&category=Language%20Packs&sortBy=Installs).
+Visual Studio Code ships by default with English as the display language and other [available-locales](#available-locales) rely on Language Pack [[vs.1.7.docs.editor.extension-marketplace]] available from the [Marketplace](https://marketplace.visualstudio.com/search?target=VSCode&category=Language%20Packs&sortBy=Installs).
 
  VS Code detects the operating system's UI language and will prompt you to install the appropriate Language Pack, if available on the Marketplace. Below is an example recommending a Simplified Chinese Language Pack:
 
@@ -33,7 +33,7 @@ Press `kb(workbench.action.showCommands)` to bring up the **Command Palette** th
 
 ![configure display language command ](/assets/configure-language-command-g5zb642rfbce.png)
 
-Press `kbstyle(Enter)` and a list of installed languages by [[vs.1.7.#available-locales]] is displayed, with the current `locale` highlighted.
+Press `kbstyle(Enter)` and a list of installed languages by [available-locales](#available-locales) is displayed, with the current `locale` highlighted.
 
 ![installed languages list](/assets/installed-languages-list-cxdrijjsrlp5.png)
 

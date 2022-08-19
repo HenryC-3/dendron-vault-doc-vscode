@@ -14,13 +14,13 @@ MetaDescription: >-
 
 # Publishing Extensions
 
-Once you have made a high-quality extension, you can publish it to the [VS Code Extension Marketplace](https://marketplace.visualstudio.com/vscode) so others can find, download, and use your extension. Alternatively, you can [[vs.1.7.#packaging-extensions]] an extension into the installable VSIX format and share it with other users.
+Once you have made a high-quality extension, you can publish it to the [VS Code Extension Marketplace](https://marketplace.visualstudio.com/vscode) so others can find, download, and use your extension. Alternatively, you can [packaging-extensions](#packaging-extensions) an extension into the installable VSIX format and share it with other users.
 
 This topic covers:
 
-- Using [[vs.1.7.#vsce]], the CLI tool for managing VS Code extensions
-- [[vs.1.7.#packaging-extensions]], [[vs.1.7.#publishing-extensions]] and [[vs.1.7.#unpublishing-extensions]] extensions
-- [[vs.1.7.#create-a-publisher]] necessary for publishing extensions
+- Using [vsce](#vsce), the CLI tool for managing VS Code extensions
+- [packaging-extensions](#packaging-extensions), [publishing-extensions](#publishing-extensions) and [unpublishing-extensions](#unpublishing-extensions) extensions
+- [create-a-publisher](#create-a-publisher) necessary for publishing extensions
 
 ## vsce
 
@@ -36,7 +36,7 @@ npm install -g vsce
 
 ### Usage
 
-You can use `vsce` to easily [[vs.1.7.#packaging-extensions]] and [[vs.1.7.#publishing-extensions]] your extensions:
+You can use `vsce` to easily [packaging-extensions](#packaging-extensions) and [publishing-extensions](#publishing-extensions) your extensions:
 
 ```bash
 $ cd myExtension
@@ -92,7 +92,7 @@ A **publisher** is an identity who can publish extensions to the Visual Studio C
 
 You can create a new publisher through the Visual Studio Marketplace publisher [management page](https://marketplace.visualstudio.com/manage). You need to login in with the same Microsoft account you used to create the [[vs.1.7.api.working-with-extensions.publishing-extension#get-a-personal-access-token]] in the previous section.
 
-Test your publisher's personal access token using [[vs.1.7.#vsce]], while at the same time storing it for later usage:
+Test your publisher's personal access token using [vsce](#vsce), while at the same time storing it for later usage:
 
 ```bash
 vsce login <publisher name>
@@ -100,7 +100,7 @@ vsce login <publisher name>
 
 ### Publish an extension
 
-You can publish an extension using [[vs.1.7.#vsce]] with the `publish` command:
+You can publish an extension using [vsce](#vsce) with the `publish` command:
 
 ```bash
 vsce publish
@@ -108,7 +108,7 @@ vsce publish
 
 This command will ask for the personal access token, if you haven't already provided it with the `vsce login` command above.
 
-Alternatively, you can [[vs.1.7.#packaging-extensions]] (`vsce package`) and manually upload it to the [Visual Studio Marketplace publisher management page](https://marketplace.visualstudio.com/manage).
+Alternatively, you can [packaging-extensions](#packaging-extensions) (`vsce package`) and manually upload it to the [Visual Studio Marketplace publisher management page](https://marketplace.visualstudio.com/manage).
 
 ![Add an extension through management page](/assets/add-extension-w1go82iruryu.png)
 
@@ -221,7 +221,7 @@ Also see [[vs.1.7.api.references.extension-manifest#marketplace-presentation-tip
 
 ### Verify a publisher
 
-You can become a **verified publisher** by verifying ownership of an [[vs.1.7.#eligible-domains]] associated with your brand or identity. Verifying your publisher will demonstrate your authenticity and add a verified badge to your extensions.
+You can become a **verified publisher** by verifying ownership of an [eligible-domains](#eligible-domains) associated with your brand or identity. Verifying your publisher will demonstrate your authenticity and add a verified badge to your extensions.
 
 ![Verified publisher indicators in VS Code](/assets/verified-publishers-rax4fsgrcgb8.png)
 
@@ -229,7 +229,7 @@ To verify a publisher:
 
 1. Visit the Visual Studio Marketplace publisher [management page](https://marketplace.visualstudio.com/manage).
 2. Select or create a publisher you wish to verify.
-3. Input an [[vs.1.7.#eligible-domains]] in the **Verified domain** field, save, and select **Verify**.
+3. Input an [eligible-domains](#eligible-domains) in the **Verified domain** field, save, and select **Verify**.
 4. Follow the instructions in the dialog to add a TXT record to your domain's DNS configuration.
 5. Select **Verify** to validate that the TXT record has been successfully added.
 

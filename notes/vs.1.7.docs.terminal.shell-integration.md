@@ -18,7 +18,7 @@ MetaDescription: >-
 
 # Terminal Shell Integration
 
-Visual Studio Code has the ability to integrate with common shells, allowing the terminal to understand more about what's actually happening inside the shell. This additional information enables some useful [[vs.1.7.#features]] such as working directory detection and command detection, decorations and navigation.
+Visual Studio Code has the ability to integrate with common shells, allowing the terminal to understand more about what's actually happening inside the shell. This additional information enables some useful [features](#features) such as working directory detection and command detection, decorations and navigation.
 
 Supported shells:
 
@@ -210,10 +210,10 @@ There are several cases where automatic injection doesn't work, here are some co
 
 ### Why are command decorations showing when the feature is disabled?
 
-The likely cause of this is that your system has shell integration for another terminal installed that [[vs.1.7.#final-term-shell-integration]]. If you don't want any decorations, you can hide them with the following setting:
+The likely cause of this is that your system has shell integration for another terminal installed that [final-term-shell-integration](#final-term-shell-integration). If you don't want any decorations, you can hide them with the following setting:
 
 ```json
 "terminal.integrated.shellIntegration.decorationsEnabled": never
 ```
 
-Alternatively, you could remove the shell integration script from your shell rc/startup script but you will lose access to command-aware features like [[vs.1.7.#command-navigation]].
+Alternatively, you could remove the shell integration script from your shell rc/startup script but you will lose access to command-aware features like [command-navigation](#command-navigation).

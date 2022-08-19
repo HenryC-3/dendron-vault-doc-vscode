@@ -15,7 +15,7 @@ MetaDescription: Learn about Visual Studio Code workspaces
 ---
 # What is a VS Code "workspace"?
 
-A Visual Studio Code "workspace" is the collection of one or more folders that are opened in a VS Code window (instance). In most cases, you will have a single folder opened as the workspace but, depending on your development workflow, you can include more than one folder, using an advanced configuration called [[vs.1.7.#multiroot-workspaces]].
+A Visual Studio Code "workspace" is the collection of one or more folders that are opened in a VS Code window (instance). In most cases, you will have a single folder opened as the workspace but, depending on your development workflow, you can include more than one folder, using an advanced configuration called [multiroot-workspaces](#multiroot-workspaces).
 
 The concept of a workspace enables VS Code to:
 
@@ -101,7 +101,7 @@ Settings configured per folder will override settings defined in the `.code-work
 
 ## Workspace tasks and launch configurations
 
-Similar to how [[vs.1.7.#workspace-settings]] are specific to a workspace, tasks and launch configurations can also be scoped to a workspace. Depending on whether you have a folder opened as workspace or a `.code-workspace` file, the location of workspace task and launch configurations will either be inside the `.vscode` folder or inside the `.code-workspace` file. In addition, task and launch configurations can always be defined at the level of a folder, even when you have opened a `.code-workspace` file.
+Similar to how [workspace-settings](#workspace-settings) are specific to a workspace, tasks and launch configurations can also be scoped to a workspace. Depending on whether you have a folder opened as workspace or a `.code-workspace` file, the location of workspace task and launch configurations will either be inside the `.vscode` folder or inside the `.code-workspace` file. In addition, task and launch configurations can always be defined at the level of a folder, even when you have opened a `.code-workspace` file.
 
 Refer to [[vs.1.7.docs.editor.tasks]] and [[v[[vs.1.7.docs.editor.debugging]]apters for a more comprehensive overview of how to use tasks and launch configurations in VS Code.
 

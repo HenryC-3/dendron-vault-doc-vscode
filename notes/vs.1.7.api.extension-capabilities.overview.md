@@ -20,7 +20,7 @@ Visual Studio Code offers many ways for extensions to extend its capabilities. I
 - Links to more detailed topics for using these functionalities
 - A few extension ideas
 
-However, we also impose [[vs.1.7.#restrictions]] upon extensions to ensure the stability and performance of VS Code. For example, extensions cannot access the DOM of VS Code UI.
+However, we also impose [restrictions](#restrictions) upon extensions to ensure the stability and performance of VS Code. For example, extensions cannot access the DOM of VS Code UI.
 
 ## Common Capabilities
 
@@ -48,7 +48,7 @@ Some of these capabilities include:
 
 ## Declarative Language Features
 
-[[vs.1.7.api.language-extensions.overview#declarative-language-features]] adds basic text editing support for a programming language such as bracket matching, auto-indentation and syntax highlighting. This is done declaratively, without writing any code. For more advanced language features, like IntelliSense or debugging, see [[vs.1.7.#programmatic-language-features]].
+[[vs.1.7.api.language-extensions.overview#declarative-language-features]] adds basic text editing support for a programming language such as bracket matching, auto-indentation and syntax highlighting. This is done declaratively, without writing any code. For more advanced language features, like IntelliSense or debugging, see [programmatic-language-features](#programmatic-language-features).
 
 **Extension Ideas**
 

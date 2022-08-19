@@ -522,7 +522,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 To disallow all local resources, just set `localResourceRoots` to `[]`.
 
-In general, webviews should be as restrictive as possible in loading local resources. However, keep in mind that `localResourceRoots` does not offer complete security protection on its own. Make sure your webview also follows [[vs.1.7.#security]], and add a [[vs.1.7.#content-security-policy]] to further restrict the content that can be loaded.
+In general, webviews should be as restrictive as possible in loading local resources. However, keep in mind that `localResourceRoots` does not offer complete security protection on its own. Make sure your webview also follows [security](#security), and add a [content-security-policy](#content-security-policy) to further restrict the content that can be loaded.
 
 ### Theming webview content
 
@@ -578,7 +578,7 @@ body[data-vscode-theme-name="One Dark Pro"] {
 
 Webviews are just like iframes, which means that they can also run scripts. JavaScript is disabled in webviews by default, but it can easily re-enable by passing in the `enableScripts: true` option.
 
-Let's use a script to add a counter tracking the lines of source code our cat has written. Running a basic script is pretty simple, but note that this example is only for demonstration purposes. In practice, your webview should always disable inline scripts using a [[vs.1.7.#content-security-policy]]:
+Let's use a script to add a counter tracking the lines of source code our cat has written. Running a basic script is pretty simple, but note that this example is only for demonstration purposes. In practice, your webview should always disable inline scripts using a [content-security-policy](#content-security-policy):
 
 ```ts
 import * as path from 'path';
@@ -905,13 +905,13 @@ Example values that must be sanitized:
 
 Consider using a helper library to construct your HTML strings, or at least ensure that all content from the user's workspace is properly sanitized.
 
-Never rely on sanitization alone for security. Make sure to follow the other security best practices, such as having a [[vs.1.7.#content-security-policy]] to minimize the impact of any potential content injections.
+Never rely on sanitization alone for security. Make sure to follow the other security best practices, such as having a [content-security-policy](#content-security-policy) to minimize the impact of any potential content injections.
 
 ## Persistence
 
-In the standard webview [[vs.1.7.#lifecycle]], webviews are created by `createWebviewPanel` and destroyed when the user closes them or when `.dispose()` is called. The contents of webviews however are created when the webview becomes visible and destroyed when the webview is moved into the background. Any state inside the webview will be lost when the webview is moved to a background tab.
+In the standard webview [lifecycle](#lifecycle), webviews are created by `createWebviewPanel` and destroyed when the user closes them or when `.dispose()` is called. The contents of webviews however are created when the webview becomes visible and destroyed when the webview is moved into the background. Any state inside the webview will be lost when the webview is moved to a background tab.
 
-The best way to solve this is to make your webview stateless. Use [[vs.1.7.#passing-messages-from-a-webview-to-an-extension]] to save off the webview's state and then restore the state when the webview becomes visible again.
+The best way to solve this is to make your webview stateless. Use [passing-messages-from-a-webview-to-an-extension](#passing-messages-from-a-webview-to-an-extension) to save off the webview's state and then restore the state when the webview becomes visible again.
 
 ### getState and setState
 

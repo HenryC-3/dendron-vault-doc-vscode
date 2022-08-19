@@ -194,6 +194,6 @@ If the error is "Writing login information to the keychain failed with error 'Ca
 
 ## Can I share settings between VS Code Stable and Insiders?
 
-Yes. Please refer to the [[vs.1.7.#syncing-stable-versus-insiders]] section for more information.
+Yes. Please refer to the [syncing-stable-versus-insiders](#syncing-stable-versus-insiders) section for more information.
 
 Please note that this can sometimes lead to data incompatibility because Insiders builds are newer than Stable builds. In such cases, Settings Sync will be disabled automatically on Stable to prevent data inconsistencies. Once a newer version of the Stable build is released, you can upgrade your client and turn on Settings Sync to continue syncing.

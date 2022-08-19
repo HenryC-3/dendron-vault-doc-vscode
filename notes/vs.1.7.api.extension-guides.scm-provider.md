@@ -140,7 +140,7 @@ The `scm/sourceControl` menu is located contextually near SourceControl instance
 
 ![source control menu](/assets/sourcecontrol-menu-6de2dl1blzz5.png)
 
-The `scm/change/title` allows you to contribute commands to the title bar of the [[vs.1.7.api.references.contribution-points#QuickDiffProvider]] inline diff editor, described [[vs.1.7.#quick-diff]]. The command will be passed as arguments the URI of the document, the array of changes within it, and the index of the change which the inline change diff editor is currently focused on. For example, here's the declaration of the `stageChange` Git command which is contributed to this menu with a `when` clause testing that the `originalResourceScheme` [[vs.1.7.api.references.when-clause-contexts]] equals `git`:
+The `scm/change/title` allows you to contribute commands to the title bar of the [[vs.1.7.api.references.contribution-points#QuickDiffProvider]] inline diff editor, described [quick-diff](#quick-diff). The command will be passed as arguments the URI of the document, the array of changes within it, and the index of the change which the inline change diff editor is currently focused on. For example, here's the declaration of the `stageChange` Git command which is contributed to this menu with a `when` clause testing that the `originalResourceScheme` [[vs.1.7.api.references.when-clause-contexts]] equals `git`:
 
 ```ts
 async stageChange(uri: Uri, changes: LineChange[], index: number): Promise<void>;

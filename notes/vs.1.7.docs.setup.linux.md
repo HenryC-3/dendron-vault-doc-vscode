@@ -141,7 +141,7 @@ Note that other binaries are also available on the [[vs.1.7.download]].
 
 VS Code ships monthly and you can see when a new release is available by checking the [[vs.1.7.updates]]. If the VS Code repository was installed correctly, then your system package manager should handle auto-updating in the same way as other packages on the system.
 
-**Note:** Updates are automatic and run in the background for the [[vs.1.7.#snap]].
+**Note:** Updates are automatic and run in the background for the [snap](#snap).
 
 ## Node.js
 

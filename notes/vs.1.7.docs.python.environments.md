@@ -18,7 +18,7 @@ MetaSocialImage: images/tutorial/social.png
 
 This article discusses the helpful Python environments features available in Visual Studio Code. An "environment" in Python is the context in which a Python program runs and consists of an interpreter and any number of installed packages.
 
-> **Note**: If you'd like to become more familiar with the Python programming language, review [[vs.1.7.#more-python-resources]].
+> **Note**: If you'd like to become more familiar with the Python programming language, review [more-python-resources](#more-python-resources).
 
 ## Python environments
 
@@ -61,11 +61,11 @@ The extension automatically looks for interpreters in the following locations:
 - Conda environments found by `conda env list`. Conda environments which do not have an interpreter will have one installed for them upon selection.
 - Interpreters installed in a `.direnv` folder for [direnv](https://direnv.net/) under the workspace (project) folder.
 
-You can also [[vs.1.7.#manually-specify-an-interpreter]] if Visual Studio Code doesn't locate your interpreter automatically.
+You can also [manually-specify-an-interpreter](#manually-specify-an-interpreter) if Visual Studio Code doesn't locate your interpreter automatically.
 
-> **Note**: Once the [[vs.1.7.#select-and-activate-an-environment]] is triggered, [pipenv](https://pipenv.readthedocs.io/) environments for the workspace folder will be searched for. If one is found, then no other interpreters are searched for or listed as pipenv expects to manage all aspects.
+> **Note**: Once the [select-and-activate-an-environment](#select-and-activate-an-environment) is triggered, [pipenv](https://pipenv.readthedocs.io/) environments for the workspace folder will be searched for. If one is found, then no other interpreters are searched for or listed as pipenv expects to manage all aspects.
 
-The extension also loads an [[vs.1.7.#environment-variable-definitions-file]] identified by the `python.envFile` setting. The default value of this setting is `${workspaceFolder}/.env`.
+The extension also loads an [environment-variable-definitions-file](#environment-variable-definitions-file) identified by the `python.envFile` setting. The default value of this setting is `${workspaceFolder}/.env`.
 
 ## Creating environments
 
@@ -131,7 +131,7 @@ By default, the Python extension looks for and uses the first Python interpreter
 
 You can switch environments at any time; switching environments helps you test different parts of your project with different interpreters or library versions as needed.
 
-The **Python: Select Interpreter** command displays a list of available global environments, conda environments, and virtual environments. (See the [[vs.1.7.#where-the-extension-looks-for-environments]] section for details, including the distinctions between these types of environments.) The following image, for example, shows several Anaconda and CPython installations along with a conda environment and a virtual environment (`env`) that's located within the workspace folder:
+The **Python: Select Interpreter** command displays a list of available global environments, conda environments, and virtual environments. (See the [where-the-extension-looks-for-environments](#where-the-extension-looks-for-environments) section for details, including the distinctions between these types of environments.) The following image, for example, shows several Anaconda and CPython installations along with a conda environment and a virtual environment (`env`) that's located within the workspace folder:
 
 ![List of interpreters](/assets/interpreters-list-aner4np4f3j0.png)
 
@@ -148,7 +148,7 @@ current system.", then you need to temporarily change the PowerShell execution p
 run (see [About Execution Policies](https://go.microsoft.com/fwlink/?LinkID=135170) in the PowerShell documentation):
 `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process`
 
-> **Note**: By default, VS Code uses the interpreter selected for your workspace when debugging code. You can override this behavior by specifying a different path in the `python` property of a debug configuration. See [[vs.1.7.#choose-a-debugging-environment]].
+> **Note**: By default, VS Code uses the interpreter selected for your workspace when debugging code. You can override this behavior by specifying a different path in the `python` property of a debug configuration. See [choose-a-debugging-environment](#choose-a-debugging-environment).
 
 The selected interpreter version will show on the right side of the Status Bar.
 
@@ -254,7 +254,7 @@ We currently support selecting Python 2.7 as an interpreter in your workspace. B
 
 ### Environment variable definitions file
 
-An environment variable definitions file is a simple text file containing key-value pairs in the form of `environment_variable=value`, with `#` used for comments. Multiline values aren't supported, but values can refer to any other environment variable that's already defined in the system or earlier in the file. For more information, see [[vs.1.7.#variable-substitution]]. Environment variable definitions files can be used for scenarios such as debugging and tool execution (including linters, formatters, IntelliSense, and testing tools), but aren't applied to the terminal.
+An environment variable definitions file is a simple text file containing key-value pairs in the form of `environment_variable=value`, with `#` used for comments. Multiline values aren't supported, but values can refer to any other environment variable that's already defined in the system or earlier in the file. For more information, see [variable-substitution](#variable-substitution). Environment variable definitions files can be used for scenarios such as debugging and tool execution (including linters, formatters, IntelliSense, and testing tools), but aren't applied to the terminal.
 
 By default, the Python extension looks for and loads a file named `.env` in the current workspace folder, then applies those definitions. The file is identified by the default entry `"python.envFile": "${workspaceFolder}/.env"` in your user settings (see [[vs.1.7.docs.python.settings-reference.md#general-python-settings]]). You can change the `python.envFile` setting at any time to use a different definitions file.
 

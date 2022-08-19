@@ -69,7 +69,7 @@ Place the cursor in one corner and then hold `kbstyle(Shift+Alt)` while dragging
 
 ![Column text selection](/assets/column-select-jzsxkshvg2lw.gif)
 
-Note: This changes to `kbstyle(Shift+Ctrl/Cmd)` when using `kbstyle(Ctrl/Cmd)` as [[vs.1.7.#multi-cursor-modifier]].
+Note: This changes to `kbstyle(Shift+Ctrl/Cmd)` when using `kbstyle(Ctrl/Cmd)` as [multi-cursor-modifier](#multi-cursor-modifier).
 
 There are also default key bindings for column selection on macOS and Windows, but not on Linux.
 

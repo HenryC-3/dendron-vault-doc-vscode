@@ -15,7 +15,7 @@ MetaDescription: Learn about Visual Studio Code collected telemetry and how to o
 ---
 # Telemetry
 
-Visual Studio Code collects telemetry data, which is used to help understand how to improve the product. For example, this usage data helps to debug issues, such as slow start-up times, and to prioritize new features.  While we appreciate the insights this data provides, we also know that not everyone wants to send usage data and you can disable telemetry as described in [[vs.1.7.#disable-telemetry-reporting]]. You can also read our [privacy statement](https://go.microsoft.com/fwlink/?LinkID=528096&clcid=0x409) to learn more.
+Visual Studio Code collects telemetry data, which is used to help understand how to improve the product. For example, this usage data helps to debug issues, such as slow start-up times, and to prioritize new features.  While we appreciate the insights this data provides, we also know that not everyone wants to send usage data and you can disable telemetry as described in [disable-telemetry-reporting](#disable-telemetry-reporting). You can also read our [privacy statement](https://go.microsoft.com/fwlink/?LinkID=528096&clcid=0x409) to learn more.
 
 ## Types of telemetry data
 
@@ -54,7 +54,7 @@ If you use the JSON editor for your settings, add the following line:
 
 VS Code lets you add features to the product by installing Microsoft and third-party extensions. These extensions may be collecting their own usage data and are not controlled by the `telemetry.telemetryLevel` setting. Consult the specific extension's documentation to learn about its telemetry reporting and whether it can be disabled.
 
-Extension authors may refer to the [[vs.1.7.#for-extension-authors]] section for guidance on implementing telemetry best practices within their extension.
+Extension authors may refer to the [for-extension-authors](#for-extension-authors) section for guidance on implementing telemetry best practices within their extension.
 
 ## Output channel for telemetry events
 

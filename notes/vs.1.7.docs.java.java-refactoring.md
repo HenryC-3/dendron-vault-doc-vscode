@@ -19,43 +19,43 @@ Visual Studio Code provides many options to refactor your source code as well as
 
 ## List of Supported Code Actions
 
-- [[vs.1.7.#refactoring]]
-  - [[vs.1.7.#assign-to-variable]]
-  - [[vs.1.7.#convert-anonymous-to-nested-class]]
-  - [[vs.1.7.#convert-to-anonymous-class-creation]]
-  - [[vs.1.7.#convert-to-enhanced-for-loop]]
-  - [[vs.1.7.#convert-to-lambda-expression]]
-  - [[vs.1.7.#convert-to-static-import]]
+- [refactoring](#refactoring)
+  - [assign-to-variable](#assign-to-variable)
+  - [convert-anonymous-to-nested-class](#convert-anonymous-to-nested-class)
+  - [convert-to-anonymous-class-creation](#convert-to-anonymous-class-creation)
+  - [convert-to-enhanced-for-loop](#convert-to-enhanced-for-loop)
+  - [convert-to-lambda-expression](#convert-to-lambda-expression)
+  - [convert-to-static-import](#convert-to-static-import)
   - Extract refactorings
-    - [[vs.1.7.#extract-to-constant]]
-    - [[vs.1.7.#extract-to-field]]
-    - [[vs.1.7.#extract-to-method]]
-    - [[vs.1.7.#extract-to-local-variable]]
+    - [extract-to-constant](#extract-to-constant)
+    - [extract-to-field](#extract-to-field)
+    - [extract-to-method](#extract-to-method)
+    - [extract-to-local-variable](#extract-to-local-variable)
   - Inline refactorings
-    - [[vs.1.7.#inline-constant]]
-    - [[vs.1.7.#inline-local-variable]]
-    - [[vs.1.7.#inline-method]]
+    - [inline-constant](#inline-constant)
+    - [inline-local-variable](#inline-local-variable)
+    - [inline-method](#inline-method)
   - Invert boolean
-    - [[vs.1.7.#invert-conditions]]
-    - [[vs.1.7.#invert-local-variable]]
-  - [[vs.1.7.#move]]
-  - [[vs.1.7.#rename]]
+    - [invert-conditions](#invert-conditions)
+    - [invert-local-variable](#invert-local-variable)
+  - [move](#move)
+  - [rename](#rename)
   - Type change
-    - [[vs.1.7.#change-resolved-type-to-var-type]]
-    - [[vs.1.7.#change-var-type-to-resolved-type]]
-- [[vs.1.7.#source-actions]]
-  - [[vs.1.7.#generate-constructors]]
-  - [[vs.1.7.#generate-delegate-methods]]
-  - [[vs.1.7.#overrideimplement-methods]]
-  - [[vs.1.7.#organize-imports]]
-  - [[vs.1.7.#generate-getters-and-setters]]
-  - [[vs.1.7.#generate-hashcode-and-equals]]
-  - [[vs.1.7.#generate-tostring]]
-  - [[vs.1.7.#change-modifiers-to-final-where-possible]]
+    - [change-resolved-type-to-var-type](#change-resolved-type-to-var-type)
+    - [change-var-type-to-resolved-type](#change-var-type-to-resolved-type)
+- [source-actions](#source-actions)
+  - [generate-constructors](#generate-constructors)
+  - [generate-delegate-methods](#generate-delegate-methods)
+  - [overrideimplement-methods](#overrideimplement-methods)
+  - [organize-imports](#organize-imports)
+  - [generate-getters-and-setters](#generate-getters-and-setters)
+  - [generate-hashcode-and-equals](#generate-hashcode-and-equals)
+  - [generate-tostring](#generate-tostring)
+  - [change-modifiers-to-final-where-possible](#change-modifiers-to-final-where-possible)
 - Other Code Actions supported
-  - [[vs.1.7.#fix-nonaccessible-reference]]
-  - [[vs.1.7.#create-non-existing-package]]
-  - [[vs.1.7.#other-code-actions-supported]]
+  - [fix-nonaccessible-reference](#fix-nonaccessible-reference)
+  - [create-non-existing-package](#create-non-existing-package)
+  - [other-code-actions-supported](#other-code-actions-supported)
 
 ## Refactoring
 
@@ -170,7 +170,7 @@ public void method() {
 }
 ```
 
-> Also see: [[vs.1.7.#convert-to-lambda-expression]]
+> Also see: [convert-to-lambda-expression](#convert-to-lambda-expression)
 
 ### Convert to enhanced for loop
 
@@ -233,7 +233,7 @@ public void method() {
   }
 ```
 
-> Also see: [[vs.1.7.#convert-to-anonymous-class-creation]]
+> Also see: [convert-to-anonymous-class-creation](#convert-to-anonymous-class-creation)
 
 ### Convert to static import
 
@@ -293,7 +293,7 @@ public double getArea(double r) {
 }
 ```
 
-> Also see: [[vs.1.7.#inline-constant]]
+> Also see: [inline-constant](#inline-constant)
 
 ### Extract to field
 
@@ -375,7 +375,7 @@ private int getArea(int height, int width) {
   <source src="/docs/java/java-refactoring/refactor.mp4" type="video/mp4">
 </video>
 
-> Also see: [[vs.1.7.#inline-method]]
+> Also see: [inline-method](#inline-method)
 
 ### Extract to local variable
 
@@ -416,7 +416,7 @@ After the extraction, you can also perform a rename in the same transaction.
   <source src="/docs/java/java-refactoring/extract-rename.mp4" type="video/mp4">
 </video>
 
-> Also see: [[vs.1.7.#inline-local-variable]]
+> Also see: [inline-local-variable](#inline-local-variable)
 
 ### Inline constant
 
@@ -446,7 +446,7 @@ public double getArea(double r) {
 }
 ```
 
-> Also see: [[vs.1.7.#extract-to-constant]]
+> Also see: [extract-to-constant](#extract-to-constant)
 
 ### Inline local variable
 
@@ -477,7 +477,7 @@ public void method() {
 }
 ```
 
-> Also see: [[vs.1.7.#extract-to-local-variable]]
+> Also see: [extract-to-local-variable](#extract-to-local-variable)
 
 ### Inline method
 
@@ -515,7 +515,7 @@ public void method() {
   <source src="/docs/java/java-refactoring/inline.mp4" type="video/mp4">
 </video>
 
-> Also see: [[vs.1.7.#extract-to-method]]
+> Also see: [extract-to-method](#extract-to-method)
 
 ### Invert conditions
 
@@ -697,7 +697,7 @@ String s = "";
 var s = "";
 ```
 
-> Also see: [[vs.1.7.#change-var-type-to-resolved-type]]
+> Also see: [change-var-type-to-resolved-type](#change-var-type-to-resolved-type)
 
 ---
 
@@ -719,7 +719,7 @@ var s = "";
 String s = "";
 ```
 
-> Also see: [[vs.1.7.#change-resolved-type-to-var-type]]
+> Also see: [change-resolved-type-to-var-type](#change-resolved-type-to-var-type)
 
 ## Source Actions
 

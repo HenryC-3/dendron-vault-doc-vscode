@@ -20,9 +20,9 @@ MetaSocialImage: /assets/docs/editor/debugging/Debugging.png
 
 Visual Studio Code includes a built-in debugger for Edge and Chrome. There are a couple ways to get started with it.
 
-* Use the [[vs.1.7.#open-link-command]] command to debug a URL.
+* Use the [open-link-command](#open-link-command) command to debug a URL.
 * Clicking a link in the [[vs.1.7.docs.nodejs.nodejs-debugging.md#javascript-debug-terminal]].
-* Use a [[vs.1.7.#launch-configuration]] to launch a browser with your app.
+* Use a [launch-configuration](#launch-configuration) to launch a browser with your app.
 
 We also have more detailed walkthroughs to get started with [[vs.1.7.docs.nodejs.reactjs-tutorial]], [[vs.1.7.docs.nodejs.angular-tutorial]], [[vs.1.7.docs.nodejs.vuejs-tutorial]], and [[vs.1.7.docs.nodejs.emberjs-tutorial]], as well as other debugging [[vs.1.7.docs.nodejs.debugging-recipes]].
 
@@ -108,7 +108,7 @@ Now, you can press `kb(workbench.action.debug.start)` or the **Start** button in
 
 ## Launch configuration attributes
 
-Debugging configurations are stored in a `launch.json` file located in your workspace's `.vscode` folder. An introduction into the creation and use of debugging configuration files is in the general [[vs.1.7.docs.editor.debugging.md#launch-configurations]] article. You can either "launch" a browser with your application, or "attach" to an existing browser that you [[vs.1.7.#attaching-to-browsers]].
+Debugging configurations are stored in a `launch.json` file located in your workspace's `.vscode` folder. An introduction into the creation and use of debugging configuration files is in the general [[vs.1.7.docs.editor.debugging.md#launch-configurations]] article. You can either "launch" a browser with your application, or "attach" to an existing browser that you [attaching-to-browsers](#attaching-to-browsers).
 
 Below is a reference of common `launch.json` attributes specific to browser debugging. You can view the complete set of options in the [vscode-js-debug options](https://github.com/microsoft/vscode-js-debug/blob/main/OPTIONS.md) documentation.
 
@@ -128,7 +128,7 @@ These attributes are only available for launch configurations of request type `a
 
 * `url` - If given, VS Code will attach to a tab with this URL. If not provided, it will attach to all browser tabs.
 * `port` - Debug port to use. See the section on [[vs.1.7.docs.nodejs.nodejs-debugging.md#attaching-to-nodejs]].
-* `address` - TCP/IP address of the debug port. See the section on [[vs.1.7.#attaching-to-browsers]].
+* `address` - TCP/IP address of the debug port. See the section on [attaching-to-browsers](#attaching-to-browsers).
 
 ## Next steps
 

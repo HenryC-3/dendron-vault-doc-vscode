@@ -61,7 +61,7 @@ You can test that you have the C++ compiler, `cl.exe`, installed correctly by ty
 
 If the Developer Command Prompt is using the BuildTools location as the starting directory (you wouldn't want to put projects there), navigate to your user folder (`C:\users\{your username}\`) before you start creating new projects.
 
->**Note**: If for some reason you can't run VS Code from a **Developer Command Prompt**, you can find a workaround for building C++ projects with VS Code in [[vs.1.7.#run-vs-code-outside-the-developer-command-prompt]].
+>**Note**: If for some reason you can't run VS Code from a **Developer Command Prompt**, you can find a workaround for building C++ projects with VS Code in [run-vs-code-outside-the-developer-command-prompt](#run-vs-code-outside-the-developer-command-prompt).
 
 ## Create Hello World
 
@@ -147,7 +147,7 @@ You'll only be asked to choose a compiler the first time you run `helloworld.cpp
 
     ![screenshot of program output](/assets/helloworld-terminal-output-r0qpifb5jx70.png)
 
-If you get an error trying to build and debug with cl.exe, make sure you have [[vs.1.7.#check-your-microsoft-visual-c-installation]] using the `code .` shortcut.
+If you get an error trying to build and debug with cl.exe, make sure you have [check-your-microsoft-visual-c-installation](#check-your-microsoft-visual-c-installation) using the `code .` shortcut.
 
 ![Error notification when trying to use MSVC without running VS Code from the Developer Command Prompt for VS](/assets/dev-command-prompt-error-7ha05kpbmne2.png)
 
@@ -228,7 +228,7 @@ You can modify your `tasks.json` to build multiple C++ files by using an argumen
 The play button has two modes: **Run C/C++ File** and **Debug C/C++ File**. It will default to the last-used mode. If you see the debug icon in the play button, you can just click the play button to debug, instead of selecting the drop-down menu item.
    ![screenshot of play button in debug mode](/assets/debug-button-eni3fhd76v5o.png)
 
-If you get an error trying to build and debug with cl.exe, make sure you have [[vs.1.7.#check-your-microsoft-visual-c-installation]] using the `code .` shortcut.
+If you get an error trying to build and debug with cl.exe, make sure you have [check-your-microsoft-visual-c-installation](#check-your-microsoft-visual-c-installation) using the `code .` shortcut.
 
 ![Error notification when trying to use MSVC without running VS Code from the Developer Command Prompt for VS](/assets/dev-command-prompt-error-7ha05kpbmne2.png)
 
@@ -441,13 +441,13 @@ In certain circumstances, it isn't possible to run VS Code from **Developer Comm
 
 If you see the error "The term 'cl.exe' is not recognized as the name of a cmdlet, function, script file, or operable program.", this usually means you are running VS Code outside of a **Developer Command Prompt for Visual Studio** and VS Code doesn't know the path to the `cl.exe` compiler.
 
-VS Code must either be started from the Developer Command Prompt for Visual Studio, or the task must be configured to [[vs.1.7.#run-vs-code-outside-the-developer-command-prompt]].
+VS Code must either be started from the Developer Command Prompt for Visual Studio, or the task must be configured to [run-vs-code-outside-the-developer-command-prompt](#run-vs-code-outside-the-developer-command-prompt).
 
 You can always check that you are running VS Code in the context of the Developer Command Prompt by opening a new Terminal (`kb(workbench.action.terminal.new)`) and typing 'cl' to verify `cl.exe` is available to VS Code.
 
 ### fatal error C1034: assert.h: no include path set
 
-In this case, `cl.exe` is available to VS Code through the `PATH` environment variable, but VS Code still needs to either be started from the **Developer Command Prompt for Visual Studio**, or be configured to [[vs.1.7.#run-vs-code-outside-the-developer-command-prompt]]. Otherwise, `cl.exe` does not have access to important environment variables such as `INCLUDE`.
+In this case, `cl.exe` is available to VS Code through the `PATH` environment variable, but VS Code still needs to either be started from the **Developer Command Prompt for Visual Studio**, or be configured to [run-vs-code-outside-the-developer-command-prompt](#run-vs-code-outside-the-developer-command-prompt). Otherwise, `cl.exe` does not have access to important environment variables such as `INCLUDE`.
 
 ## Next steps
 

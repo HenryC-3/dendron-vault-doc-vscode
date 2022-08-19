@@ -25,7 +25,7 @@ If you are new to using the VS Code Integrated Terminal, you can learn more in t
 
 Below are specific troubleshooting steps, if the user guide hasn't helped you diagnose the launch failure. The troubleshooting steps, such as checking your settings and enabling logging, apply to all platforms that support VS Code; macOS, Linux, and Windows.
 
-> **Note**: If you're on Windows, you may want to review the [[vs.1.7.#common-issues-on-windows]] section first.
+> **Note**: If you're on Windows, you may want to review the [common-issues-on-windows](#common-issues-on-windows) section first.
 
 ## Troubleshooting steps
 

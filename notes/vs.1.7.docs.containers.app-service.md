@@ -33,7 +33,7 @@ In this guide you will learn how to:
 
 ## Create the application image
 
-If you already have an image, skip this step and proceed to [[vs.1.7.#push-the-image-to-a-container-registry]] step.
+If you already have an image, skip this step and proceed to [push-the-image-to-a-container-registry](#push-the-image-to-a-container-registry) step.
 
 1. Open the application folder in VS Code.
 

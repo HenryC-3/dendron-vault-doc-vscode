@@ -42,7 +42,7 @@ It is important to keep in mind that VS Code's TypeScript language service is se
 
 ![TypeScript version displayed in the Status Bar](/assets/version-status-bar-bs35j31dknnl.png)
 
-Later in the article, we'll discuss how you can [[vs.1.7.#using-newer-typescript-versions]] the version of TypeScript language service that VS Code uses.
+Later in the article, we'll discuss how you can [using-newer-typescript-versions](#using-newer-typescript-versions) the version of TypeScript language service that VS Code uses.
 
 ## tsconfig.json
 
@@ -236,7 +236,7 @@ The `typescript.tsdk` workspace setting only tells VS Code that a workspace vers
 
 The simplest way to try out the latest TypeScript features in VS Code is to install the [JavaScript and TypeScript Nightly extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-typescript-next).
 
-This extension automatically replaces VS Code's built-in TypeScript version with the latest TypeScript nightly build. Just make sure you [[vs.1.7.#using-the-workspace-version-of-typescript]] if you've configured your TypeScript version with the **TypeScript: Select TypeScript Version** command.
+This extension automatically replaces VS Code's built-in TypeScript version with the latest TypeScript nightly build. Just make sure you [using-the-workspace-version-of-typescript](#using-the-workspace-version-of-typescript) if you've configured your TypeScript version with the **TypeScript: Select TypeScript Version** command.
 
 ## Mixed TypeScript and JavaScript projects
 
@@ -276,7 +276,7 @@ If you get that error, resolve it by creating a `tsconfig.json` file in the root
 
 ### Why do I get different errors and warnings with VS Code than when I compile my TypeScript project?
 
-VS Code ships with a recent stable version of the TypeScript language service and it may not match the version of TypeScript installed globally on your computer or locally in your workspace. For that reason, you may see differences between your compiler output and errors detected by the active TypeScript language service. See [[vs.1.7.#using-newer-typescript-versions]] for details on installing a matching TypeScript version.
+VS Code ships with a recent stable version of the TypeScript language service and it may not match the version of TypeScript installed globally on your computer or locally in your workspace. For that reason, you may see differences between your compiler output and errors detected by the active TypeScript language service. See [using-newer-typescript-versions](#using-newer-typescript-versions) for details on installing a matching TypeScript version.
 
 ### Can I use the version of TypeScript that ships with VS 2022?
 

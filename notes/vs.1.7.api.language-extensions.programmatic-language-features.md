@@ -15,7 +15,7 @@ MetaDescription: >-
 
 # Programmatic Language Features
 
-Programmatic Language Features is a set of smart-editing features powered by the [[vs.1.7.api.references.vscode-api#languages]] API. There are two common ways to provide a dynamic language feature in Visual Studio Code. Let's take [[vs.1.7.#hover]] as an example:
+Programmatic Language Features is a set of smart-editing features powered by the [[vs.1.7.api.references.vscode-api#languages]] API. There are two common ways to provide a dynamic language feature in Visual Studio Code. Let's take [hover](#hover) as an example:
 
 ```ts
 vscode.languages.registerHoverProvider('javascript', {
@@ -27,7 +27,7 @@ vscode.languages.registerHoverProvider('javascript', {
 });
 ```
 
-As you see above, the [[vs.1.7.api.references.vscode-api#languages.registerHoverProvider]] API provides an easy way to provide hover contents to JavaScript files. After this extension gets activated, whenever you hover over some JavaScript code, VS Code queries all [[vs.1.7.api.references.vscode-api#HoverProvider]] for JavaScript and shows the result in a Hover widget. The [[vs.1.7.#language-features-listing]] and illustrated gif below provides an easy way for you to locate which VS Code API / LSP Method your extension needs.
+As you see above, the [[vs.1.7.api.references.vscode-api#languages.registerHoverProvider]] API provides an easy way to provide hover contents to JavaScript files. After this extension gets activated, whenever you hover over some JavaScript code, VS Code queries all [[vs.1.7.api.references.vscode-api#HoverProvider]] for JavaScript and shows the result in a Hover widget. The [language-features-listing](#language-features-listing) and illustrated gif below provides an easy way for you to locate which VS Code API / LSP Method your extension needs.
 
 An alternative approach is to implement a Language Server that speaks [Language Server Protocol](https://microsoft.github.io/language-server-protocol/). The way it works is:
 

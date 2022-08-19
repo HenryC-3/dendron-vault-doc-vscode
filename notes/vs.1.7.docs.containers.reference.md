@@ -17,7 +17,7 @@ MetaDescription: >-
 ---
 # Customize the Docker extension
 
-The Docker extension includes several Visual Studio Code tasks to control the behavior of Docker [[vs.1.7.#docker-build-task]] and [[vs.1.7.#docker-run-task]], and form the basis of container startup for debugging.
+The Docker extension includes several Visual Studio Code tasks to control the behavior of Docker [docker-build-task](#docker-build-task) and [docker-run-task](#docker-run-task), and form the basis of container startup for debugging.
 
 The tasks allow for a great deal of control and customization. The final configuration is a combination of general defaults, platform-specific defaults (such as Node.js, Python, or .NET), and user input. User input takes precedence when it conflicts with defaults.
 
@@ -32,7 +32,7 @@ The most important configuration settings for the `docker-build` task are `docke
 - The `dockerBuild` object specifies parameters for the Docker build command. Values specified by this object are applied directly to Docker build CLI invocation.
 - The `platform` property is a hint that changes how the `docker-build` task determines Docker build defaults.
 
-See [[vs.1.7.#build-task-reference]] for full list of all task properties.
+See [build-task-reference](#build-task-reference) for full list of all task properties.
 
 ### Platform support
 
@@ -133,11 +133,11 @@ Here are all properties available for configuring `docker-build` task. All prope
 
 | Property | Description |
 | --- | --- |
-| `dockerBuild` | Options for controlling the `docker build` command executed ([[vs.1.7.#dockerbuild-object-properties]]). <br/> Required unless `platform` is set. |
+| `dockerBuild` | Options for controlling the `docker build` command executed ([dockerbuild-object-properties](#dockerbuild-object-properties)). <br/> Required unless `platform` is set. |
 | `platform` | Determines the platform: .NET (`netcore`) or Node.js (`node`) and default settings for `docker build` command. |
-| `node` | Determines options specific for Node.js projects ([[vs.1.7.#node-object-properties-dockerbuild-task]]). |
+| `node` | Determines options specific for Node.js projects ([node-object-properties-dockerbuild-task](#node-object-properties-dockerbuild-task)). |
 | `python` | There are no object properties for Python in the `docker-build` task. |
-| `netCore` | Determines options specific for .NET projects ([[vs.1.7.#netcore-object-properties-dockerbuild-task]]). |
+| `netCore` | Determines options specific for .NET projects ([netcore-object-properties-dockerbuild-task](#netcore-object-properties-dockerbuild-task)). |
 
 ### dockerBuild object properties
 
@@ -173,7 +173,7 @@ The most important configuration settings for the `docker-run` task are `dockerR
 - The `dockerRun` object specifies parameters for the Docker run command. Values specified by this object are applied directly to Docker run CLI invocation.
 - The `platform` property is a hint that changes how the `docker-run` task determines Docker run defaults.
 
-See [[vs.1.7.#run-task-reference]] for full list of all task properties.
+See [run-task-reference](#run-task-reference) for full list of all task properties.
 
 ### Docker run platform support
 
@@ -324,11 +324,11 @@ Here are all properties available for configuring `docker-run` task. All propert
 
 | Property | Description |
 | --- | --- |
-| `dockerRun` | Options for controlling the `docker run` command executed ([[vs.1.7.#dockerrun-object-properties]]). <br/> Required unless `platform` is set. |
+| `dockerRun` | Options for controlling the `docker run` command executed ([dockerrun-object-properties](#dockerrun-object-properties)). <br/> Required unless `platform` is set. |
 | `platform` | Determines the platform: .NET (`netcore`) or Node.js (`node`) and default settings for `docker run` command. |
-| `node` | For Node.js projects, this controls various options ([[vs.1.7.#node-object-properties-dockerrun-task]]). |
-| `python` | For Python projects, this controls various options ([[vs.1.7.#python-object-properties-dockerrun-task]]). |
-| `netCore` | For .NET projects, this controls various options ([[vs.1.7.#netcore-object-properties-dockerrun-task]]). |
+| `node` | For Node.js projects, this controls various options ([node-object-properties-dockerrun-task](#node-object-properties-dockerrun-task)). |
+| `python` | For Python projects, this controls various options ([python-object-properties-dockerrun-task](#python-object-properties-dockerrun-task)). |
+| `netCore` | For .NET projects, this controls various options ([netcore-object-properties-dockerrun-task](#netcore-object-properties-dockerrun-task)). |
 
 ### dockerRun object properties
 
@@ -343,10 +343,10 @@ Here are all properties available for configuring `docker-run` task. All propert
 | `network` | The name of the network to which the container will be connected. | `--network` |
 | `networkAlias` | The network-scoped alias for the started container. | `--network-alias` |
 | `os` | Default is `Linux`, the other option is `Windows`. The container operating system used. | N/A |
-| `ports` | The ports to publish (map) from container to host. This is a list of objects ([[vs.1.7.#ports-object-properties]]). | `-p` or `--publish` |
+| `ports` | The ports to publish (map) from container to host. This is a list of objects ([ports-object-properties](#ports-object-properties)). | `-p` or `--publish` |
 | `portsPublishAll` | Whether to publish all ports exposed by the Docker image.  Defaults to `true` if no ports are explicitly published. | `-P` |
-| `extraHosts` | The hosts to add to the container for DNS resolution. This is a list of objects ([[vs.1.7.#extrahosts-object-properties]]). | `--add-host` |
-| `volumes` | The volumes to map into the started container. This is a list of objects ([[vs.1.7.#volumes-object-properties]]). | `-v` or `--volume` |
+| `extraHosts` | The hosts to add to the container for DNS resolution. This is a list of objects ([extrahosts-object-properties](#extrahosts-object-properties)). | `--add-host` |
+| `volumes` | The volumes to map into the started container. This is a list of objects ([volumes-object-properties](#volumes-object-properties)). | `-v` or `--volume` |
 | `remove` | Whether or not to remove the container after it stops. | `--rm` |
 | `customOptions` | Any extra parameters to add before the image argument. No attempt is made to resolve conflicts with other options or validate this option. | (any) |
 
@@ -386,7 +386,7 @@ Here are all properties available for configuring `docker-run` task. All propert
 
 | Property | Description | Default |
 | --- | --- | --- |
-| `args` | Arguments passed to the Python app. | Platform dependent. Defaults of scaffolding shown [[vs.1.7.#python-docker-run]] |
+| `args` | Arguments passed to the Python app. | Platform dependent. Defaults of scaffolding shown [python-docker-run](#python-docker-run) |
 | `debugPort` | The port that the debugger will listen on. | `5678` |
 | `wait` | Whether to wait for debugger to attach. | `true` |
 | `module` | The Python module to run (only module **or** file should be chosen). | |
@@ -408,7 +408,7 @@ The most important configuration setting for the `docker-compose` task is `docke
 
 - The `dockerCompose` object specifies parameters for the Docker Compose command. Values specified by this object are applied directly to Docker Compose CLI invocation.
 
-See [[vs.1.7.#compose-task-reference]] for full list of all task properties.
+See [compose-task-reference](#compose-task-reference) for full list of all task properties.
 
 **Example configuration**
 
@@ -443,7 +443,7 @@ Here are all properties available for configuring `docker-compose` task. All pro
 
 | Property | Description |
 | --- | --- |
-| `dockerCompose` | Options for controlling the `docker-compose` command executed ([[vs.1.7.#dockercompose-object-properties]]). <br/> Required. |
+| `dockerCompose` | Options for controlling the `docker-compose` command executed ([dockercompose-object-properties](#dockercompose-object-properties)). <br/> Required. |
 
 ### dockerCompose object properties
 
@@ -478,7 +478,7 @@ Here are all properties available for configuring `docker-compose` task. All pro
 
 The Docker extension executes a number of Docker CLI commands when you perform various operations, such as to build images, run containers, attach to containers, and view container logs. Some of these commands have a large number of optional arguments, often used in very specific scenarios. Many of these commands can be customized.
 
-For example, the tokens `${serviceList}` and `${profileList}` in the [[vs.1.7.#docker-compose-up]] command allows for easily starting a subset of the services within your Docker Compose YAML file(s).
+For example, the tokens `${serviceList}` and `${profileList}` in the [docker-compose-up](#docker-compose-up) command allows for easily starting a subset of the services within your Docker Compose YAML file(s).
 
 For each of these customizable Docker commands, a configuration setting is available to set the template of what to execute. Alternatively, you can define multiple templates, optionally with a regular expression, which when matched, hints the context in which a template should be used. The templates support some tokens similar to `launch.json` and `tasks.json`, for example, `${workspaceFolder}`.
 

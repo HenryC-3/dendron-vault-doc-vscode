@@ -17,7 +17,7 @@ MetaDescription: >-
 ---
 # Terminal Basics
 
-Visual Studio Code includes a fully-featured integrated terminal that conveniently starts at the root of your workspace. It provides integration with the editor to support features like [[vs.1.7.#links]] and [[vs.1.7.docs.editor.tasks]].
+Visual Studio Code includes a fully-featured integrated terminal that conveniently starts at the root of your workspace. It provides integration with the editor to support features like [links](#links) and [[vs.1.7.docs.editor.tasks]].
 
 To open the terminal:
 
@@ -41,7 +41,7 @@ You can select other available shells to use in terminal instances or as the def
 
 ![Integrated terminal shell selection dropdown](/assets/select-shell-dropdown-g4fbv3cmqw3i.png)
 
-You can learn more about configuring terminal shells in the [[vs.1.7.#terminal-profiles]] section below.
+You can learn more about configuring terminal shells in the [terminal-profiles](#terminal-profiles) section below.
 
 >**Note**: If you're having trouble launching your preferred shell in the integrated terminal, it may be due to your shell's configuration or a VS Code terminal setting. There's a [[vs.1.7.docs.supporting.troubleshoot-terminal-launch]] to help you with these sorts of problems.
 

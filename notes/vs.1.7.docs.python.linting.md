@@ -67,11 +67,11 @@ The following table provides a summary of available Python linters and their bas
 
 | Linter | Package name for `pip install` command | True/false enable setting<br/>(python.linting.) | Arguments setting<br/>(python.linting.) | Custom path setting<br/>(python.linting.) |
 | --- | --- | --- | --- | --- |
-| [[vs.1.7.#pylint]] | [pylint](https://pypi.org/project/pylint/) | pylintEnabled | pylintArgs | pylintPath |
-| [[vs.1.7.#flake8]] | [flake8](https://pypi.org/project/flake8/) | flake8Enabled | flake8Args | flake8Path |
-| [[vs.1.7.#mypy]] | [mypy](https://pypi.org/project/mypy/) | mypyEnabled | mypyArgs | mypyPath |
-| [[vs.1.7.#pycodestyle-pep8]] | [pycodestyle](https://pypi.org/project/pycodestyle/) | pycodestyleEnabled | pycodestyleArgs | pycodestylePath |
-| [[vs.1.7.#prospector]] | [prospector](https://pypi.org/project/prospector/) | prospectorEnabled | prospectorArgs | prospectorPath |
+| [pylint](#pylint) | [pylint](https://pypi.org/project/pylint/) | pylintEnabled | pylintArgs | pylintPath |
+| [flake8](#flake8) | [flake8](https://pypi.org/project/flake8/) | flake8Enabled | flake8Args | flake8Path |
+| [mypy](#mypy) | [mypy](https://pypi.org/project/mypy/) | mypyEnabled | mypyArgs | mypyPath |
+| [pycodestyle-pep8](#pycodestyle-pep8) | [pycodestyle](https://pypi.org/project/pycodestyle/) | pycodestyleEnabled | pycodestyleArgs | pycodestylePath |
+| [prospector](#prospector) | [prospector](https://pypi.org/project/prospector/) | prospectorEnabled | prospectorArgs | prospectorPath |
 | pylama | [pylama](https://pypi.org/project/pylama/) | pylamaEnabled | pylamaArgs | pylamaPath |
 | bandit | [bandit](https://pypi.org/project/bandit/) | banditEnabled | banditArgs | banditPath  |
 
@@ -89,7 +89,7 @@ If a top-level element is a single value (delineated by quotation marks or brace
 
 A custom path is generally unnecessary as the Python extension resolves the path to the linter based on the Python interpreter being used (see [[vs.1.7.docs.python.environments]]). To use a different version of a linter, specify its path in the appropriate custom path setting. For example, if your selected interpreter is a virtual environment but you want to use a linter that's installed in a global environment, then set the appropriate path setting to point to the global environment's linter.
 
-> **Note**: The following sections provide additional details for the individual linters linked in the [[vs.1.7.#specific-linters]] table above. In general, custom rules must be specified in a separate file as required by the linter you're using.
+> **Note**: The following sections provide additional details for the individual linters linked in the [specific-linters](#specific-linters) table above. In general, custom rules must be specified in a separate file as required by the linter you're using.
 
 ## Pylint
 

@@ -32,7 +32,7 @@ The second important choice is whether to debug your service running as an ordin
 
 1. Consider using a [[vs.1.7.docs.remote.containers]] first, if you need a remote environment.
 
-    - On Windows, using [[vs.1.7.#windows-subsystem-for-linux]] is good option.
+    - On Windows, using [windows-subsystem-for-linux](#windows-subsystem-for-linux) is good option.
 
 1. Debugging your service running in a container is possible, but brings additional complexity. Use normal debugging by default, and debugging in the container when you need it.
 

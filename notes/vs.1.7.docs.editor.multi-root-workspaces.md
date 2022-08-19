@@ -124,7 +124,7 @@ which will result in the following Explorer display:
 
 As you can see from the example above, you can add comments to your Workspace files.
 
-The Workspace file can also contain Workspace [[vs.1.7.#settings]] under `settings` and [[vs.1.7.#extensions]] under `extensions`, which we will discuss below.
+The Workspace file can also contain Workspace [settings](#settings) under `settings` and [extensions](#extensions) under `extensions`, which we will discuss below.
 
 ![workspace file schema](/assets/workspace-file-schema-zwe5ap1p1e5f.png)
 

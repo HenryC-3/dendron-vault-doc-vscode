@@ -19,7 +19,7 @@ Visual Studio Code takes security seriously and wants to help you safely browse 
 
 ![Trust this folder dialog](/assets/workspace-trust-dialog-oae22os52u8h.png)
 
->**Note**: When in doubt, leave a folder in [[vs.1.7.#restricted-mode]]. You can always [[vs.1.7.#trusting-a-workspace]] later.
+>**Note**: When in doubt, leave a folder in [restricted-mode](#restricted-mode). You can always [trusting-a-workspace](#trusting-a-workspace) later.
 
 ## Safe code browsing
 
@@ -98,7 +98,7 @@ For example, the VS Code built-in PHP extension limits the use of the `php.valid
 
 ![PHP extension limited in Restricted Mode hover](/assets/php-limited-hover-j9me7j5m4qd4.png)
 
-You can override an extension's Workspace Trust support level using the `extensions.supportUntrustedWorkspaces` setting described in the [[vs.1.7.#enabling-extensions]] section below.
+You can override an extension's Workspace Trust support level using the `extensions.supportUntrustedWorkspaces` setting described in the [enabling-extensions](#enabling-extensions) section below.
 
 If you try to install an extension in Restricted Mode, you will be prompted to either trust the workspace or just install the extension. If the extension doesn't support Workspace Trust, it will be installed, but be disabled or running with limited functionality.
 
@@ -214,7 +214,7 @@ When working with [[vs.1.7.docs.editor.multi-root-workspaces]] with multiple fol
 
 By default, if you open a new VS Code window (instance) without opening a folder or workspace, VS Code runs the window with full trust. All installed extensions are enabled and you can use the empty window without restrictions.
 
-When you open a file, you will be prompted whether you want to open an [[vs.1.7.#opening-untrusted-files]] since there is no folder to parent it.
+When you open a file, you will be prompted whether you want to open an [opening-untrusted-files](#opening-untrusted-files) since there is no folder to parent it.
 
 You can switch an empty window to Restricted Mode using the Workspace Trust editor (select **Manage Workspace Trust** from the **Manage** gear button or the Command Palette) and selecting **Don't Trust**. The empty window will remain in Restricted Mode for your current session but will go back to trusted if you restart or create a new window.
 
@@ -269,7 +269,7 @@ Yes, you can still browse and edit source code in Restricted Mode. Some language
 
 In Restricted Mode, any extension that doesn't support Workspace Trust will be disabled, and all UI elements such as Activity bar icons and commands will not be displayed.
 
-You can override an extension's Workspace Trust support level with the `extensions.supportUntrustedWorkspaces` setting but do so with care. [[vs.1.7.#enabling-extensions]] has more details.
+You can override an extension's Workspace Trust support level with the `extensions.supportUntrustedWorkspaces` setting but do so with care. [enabling-extensions](#enabling-extensions) has more details.
 
 <!-- List of popular extensions that currently need this override. -->
 

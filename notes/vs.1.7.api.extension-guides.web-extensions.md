@@ -16,7 +16,7 @@ MetaDescription: >-
 
 Visual Studio Code can run as an editor in the browser. One example is the `github.dev` user interface reached by pressing `.` (the period key) when browsing a repository or Pull Request in GitHub. When VS Code is used in the Web, installed extensions are run in an extension host in the browser, called the 'web extension host'. An extension that can run in a web extension host is called a 'web extension'.
 
-Web extensions share the same structure as regular extensions, but given the different runtime, don't run with the same code as extensions written for a Node.js runtime. Web extensions still have access to the full VS Code API, but no longer to the Node.js APIs and module loading. Instead, web extensions are restricted by the browser sandbox and therefore have [[vs.1.7.#web-extension-main-file]] compared to normal extensions.
+Web extensions share the same structure as regular extensions, but given the different runtime, don't run with the same code as extensions written for a Node.js runtime. Web extensions still have access to the full VS Code API, but no longer to the Node.js APIs and module loading. Instead, web extensions are restricted by the browser sandbox and therefore have [web-extension-main-file](#web-extension-main-file) compared to normal extensions.
 
 The web extension runtime is supported on VS Code desktop too. If you decide to create your extension as a web extension, it will be supported on [[vs.1.7.docs.editor.vscode-web]] (including `vscode.dev` and `github.dev`) as well as on the desktop and in services like [[vs.1.7.docs.remote.codespaces]].
 
@@ -24,7 +24,7 @@ The web extension runtime is supported on VS Code desktop too. If you decide to
 
 A web extension is [[vs.1.7.api.get-started.extension-anatomy]]. The extension manifest (`package.json`) defines the entry file for the extension's source code and declares extension contributions.
 
-For web extensions, the [[vs.1.7.#web-extension-main-file]] is defined by the `browser` property, and not by the `main` property as with regular extensions.
+For web extensions, the [web-extension-main-file](#web-extension-main-file) is defined by the `browser` property, and not by the `main` property as with regular extensions.
 
 The `contributes` property works the same way for both web and regular extensions.
 
@@ -75,9 +75,9 @@ Extensions that have only a `main` entry point, but no `browser` are not web ext
 
 Extensions with only declarative contributions (only `contributes`, no `main` or `browser`) can be web extensions. They can be installed and run in [[vs.1.7.docs.editor.vscode-web]] without any modifications by the extension author. Examples of extensions with declarative contributions include themes, grammars, and snippets.
 
-Extensions can have both `browser` and `main` entry points in order to run in browser and in Node.js runtimes. The [[vs.1.7.#update-existing-extensions-to-web-extensions]] section shows how to migrate an extension to work in both runtimes.
+Extensions can have both `browser` and `main` entry points in order to run in browser and in Node.js runtimes. The [update-existing-extensions-to-web-extensions](#update-existing-extensions-to-web-extensions) section shows how to migrate an extension to work in both runtimes.
 
-The [[vs.1.7.#web-extension-enablement]] section lists the rules used to decide whether an extension can be loaded in a web extension host.
+The [web-extension-enablement](#web-extension-enablement) section lists the rules used to decide whether an extension can be loaded in a web extension host.
 
 ### Web extension main file
 
@@ -85,11 +85,11 @@ The web extension's main file is defined by the `browser` property. The script r
 
 * Importing or requiring other modules is not supported. `importScripts` is not available as well. As a consequence, the code must be packaged to a single file.
 * The [[vs.1.7.api.references.vscode-api]] can be loaded via the pattern `require('vscode')`. This will work because there is a shim for `require`, but this shim cannot be used to load additional extension files or additional node modules. It only works with `require('vscode')`.
-* Node.js globals and libraries such as `process`, `os`, `setImmediate`, `path`, `util`, `url` are not available at runtime. They can, however, be added with tools like webpack. The [[vs.1.7.#webpack-configuration]] section explains how this is done.
+* Node.js globals and libraries such as `process`, `os`, `setImmediate`, `path`, `util`, `url` are not available at runtime. They can, however, be added with tools like webpack. The [webpack-configuration](#webpack-configuration) section explains how this is done.
 * The opened workspace or folder is on a virtual file system. Access to workspace files needs to go through the VS Code [[vs.1.7.api.references.vscode-api#FileSystem]] API accessible at `vscode.workspace.fs`.
 * [[vs.1.7.api.references.vscode-api#ExtensionContext]] locations (`ExtensionContext.extensionUri`) and  storage locations (`ExtensionContext.storageUri`, `globalStorageUri`) are also on a virtual file system and need to go through `vscode.workspace.fs`.
 * For accessing web resources, the [Fetch](https://developer.mozilla.org/docs/Web/API/Fetch_API) API must be used. Accessed resources need to support [Cross-Origin Resource Sharing](https://developer.mozilla.org/docs/Web/HTTP/CORS) (CORS)
-* Creating child processes or running executables is not possible. However, web workers can be created through the [Worker](https://developer.mozilla.org/en-US/docs/Web/API/Worker) API. This is used for running language servers as described in the [[vs.1.7.#language-server-protocol-in-web-extensions]] section.
+* Creating child processes or running executables is not possible. However, web workers can be created through the [Worker](https://developer.mozilla.org/en-US/docs/Web/API/Worker) API. This is used for running language servers as described in the [language-server-protocol-in-web-extensions](#language-server-protocol-in-web-extensions) section.
 * As with regular extensions, the extension's `activate/deactivate` functions need to be exported via the pattern `exports.activate = ...`.
 
 ## Develop a web extension
@@ -199,7 +199,7 @@ There are currently three ways to test a web extension before publishing it to t
 
 * Use VS Code running on the desktop with the `--extensionDevelopmentKind=web` option to run your web extension in a web extension host running in VS Code.
 * Use the [@vscode/test-web](https://github.com/microsoft/vscode-test-web) node module to open a browser containing VS Code for the Web including your extension, served from a local server.
-* [[vs.1.7.#test-your-web-extension-in-on-vscode.dev]] your extension onto [vscode.dev](https://vscode.dev) to see your extension in the actual environment.
+* [test-your-web-extension-in-on-vscode.dev](#test-your-web-extension-in-on-vscode.dev) your extension onto [vscode.dev](https://vscode.dev) to see your extension in the actual environment.
 
 ### Test your web extension in VS Code running on desktop
 
@@ -355,7 +355,7 @@ The utility does the following steps:
 
 You can run the tests in continuous builds to ensure that the extension works on all browsers.
 
-The test runner script is running on the web extension host with the same restrictions as the [[vs.1.7.#web-extension-main-file]]:
+The test runner script is running on the web extension host with the same restrictions as the [web-extension-main-file](#web-extension-main-file):
 
 * All files are bundled into a single file. It should contain the test runner (for example, Mocha) and all tests (typically `*.test.ts`).
 * Only `require('vscode')` is supported.
@@ -436,7 +436,7 @@ To run (and debug) extension tests in VS Code (Insiders) desktop, use the `Exten
 
 Web extensions are hosted on the [Marketplace](https://marketplace.visualstudio.com/vscode) along with other extensions.
 
-Make sure to use the latest version of `vsce` to publish your extension. `vsce` tags all extensions that are web extension. For that `vsce` is using the rules listed in the [[vs.1.7.#web-extension-enablement]] section.
+Make sure to use the latest version of `vsce` to publish your extension. `vsce` tags all extensions that are web extension. For that `vsce` is using the rules listed in the [web-extension-enablement](#web-extension-enablement) section.
 
 ## Update existing extensions to Web extensions
 
@@ -448,14 +448,14 @@ Republishing is not necessary, but when publishing a new version of the extensio
 
 ### Migrate extension with code
 
-Extensions with source code (defined by the `main` property) need to provide a [[vs.1.7.#web-extension-main-file]] and set the `browser` property in `package.json`.
+Extensions with source code (defined by the `main` property) need to provide a [web-extension-main-file](#web-extension-main-file) and set the `browser` property in `package.json`.
 
 Use these steps to recompile your extension code for the browser environment:
 
-* Add a webpack config file as shown in the [[vs.1.7.#webpack-configuration]] section. If you already have a webpack file for your Node.js extension code, you can add a new section for web. Check out the [vscode-css-formatter](https://github.com/aeschli/vscode-css-formatter/blob/master/webpack.config.js) as an example.
-* Add the `launch.json` and `tasks.json` files as shown in the [[vs.1.7.#test-your-web-extension]] section.
+* Add a webpack config file as shown in the [webpack-configuration](#webpack-configuration) section. If you already have a webpack file for your Node.js extension code, you can add a new section for web. Check out the [vscode-css-formatter](https://github.com/aeschli/vscode-css-formatter/blob/master/webpack.config.js) as an example.
+* Add the `launch.json` and `tasks.json` files as shown in the [test-your-web-extension](#test-your-web-extension) section.
 * In the webpack config file, set the input file to the existing Node.js main file or create a new main file for the web extension.
-* In `package.json`, add a `browser` and the `scripts` properties as shown in the [[vs.1.7.#web-extension-anatomy]] section.
+* In `package.json`, add a `browser` and the `scripts` properties as shown in the [web-extension-anatomy](#web-extension-anatomy) section.
 * Run `npm run compile-web` to invoke webpack and see where work is needed to make your extension run in the web.
 
 To make sure as much source code as possible can be reused, here are a few techniques:
@@ -475,7 +475,7 @@ It is fine to provide less functionality when your extension is running in the w
 * Use `shellExecutionSupported` if there is a platform shell present.
 * Implement alternative command handlers that show a dialog to explain why the command is not applicable.
 
-WebWorkers can be used as an alternative to forking processes. We have updated several language servers to run as web extensions, including the built-in [JSON](https://github.com/microsoft/vscode/tree/main/extensions/json-language-features), [CSS](https://github.com/microsoft/vscode/tree/main/extensions/css-language-features), and [HTML](https://github.com/microsoft/vscode/tree/main/extensions/html-language-features) language servers. The [[vs.1.7.#language-server-protocol-in-web-extensions]] section below gives more details.
+WebWorkers can be used as an alternative to forking processes. We have updated several language servers to run as web extensions, including the built-in [JSON](https://github.com/microsoft/vscode/tree/main/extensions/json-language-features), [CSS](https://github.com/microsoft/vscode/tree/main/extensions/css-language-features), and [HTML](https://github.com/microsoft/vscode/tree/main/extensions/html-language-features) language servers. The [language-server-protocol-in-web-extensions](#language-server-protocol-in-web-extensions) section below gives more details.
 
 The browser runtime environment only supports the execution of JavaScript and [WebAssembly](https://webassembly.org/). Libraries written in other programming languages need to be cross-compiled, for instance there is tooling to compile [C/C++](https://developer.mozilla.org/en-US/docs/WebAssembly/C_to_wasm) and [Rust](https://developer.mozilla.org/en-US/docs/WebAssembly/Rust_to_wasm) to WebAssembly. The [vscode-anycode](https://github.com/microsoft/vscode-anycode) extension, for example, uses [tree-sitter](https://www.npmjs.com/package/tree-sitter), which is C/C++ code compiled to WebAssembly.
 

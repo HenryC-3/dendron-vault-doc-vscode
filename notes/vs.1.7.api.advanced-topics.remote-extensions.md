@@ -17,7 +17,7 @@ MetaDescription: >-
 
 To ensure performance, Remote Development and GitHub Codespaces both transparently run certain VS Code extensions remotely. However, this can have subtle impacts on how extensions need to work.  While many extensions will work without any modifications, you may need to make changes so that your extension works properly in all environments, although these changes are often fairly minor.
 
-This article summarizes what extension authors need to know about Remote Development and Codespaces including the extension [[vs.1.7.#architecture-and-extension-kinds]], how to [[vs.1.7.#debugging-extensions]] in remote workspaces or Codespaces, and recommendations on [[vs.1.7.#common-problems]].
+This article summarizes what extension authors need to know about Remote Development and Codespaces including the extension [architecture-and-extension-kinds](#architecture-and-extension-kinds), how to [debugging-extensions](#debugging-extensions) in remote workspaces or Codespaces, and recommendations on [common-problems](#common-problems).
 
 ## Architecture and extension kinds
 
@@ -35,13 +35,13 @@ The VS Code APIs are designed to automatically run on the correct machine (eithe
 
 ## Debugging Extensions
 
-While you [[vs.1.7.#installing-a-development-version-of-your-extension]] in a remote environment for testing, if you encounter issues, you will likely want to debug your extension directly in a remote environment. In this section, we will cover how to edit, launch, and debug your extension in [[vs.1.7.#debugging-with-visual-studio-codespaces]], a [[vs.1.7.#debugging-in-a-custom-development-container]], an [[vs.1.7.#debugging-using-ssh]], or in [[vs.1.7.#debugging-using-wsl]].
+While you [installing-a-development-version-of-your-extension](#installing-a-development-version-of-your-extension) in a remote environment for testing, if you encounter issues, you will likely want to debug your extension directly in a remote environment. In this section, we will cover how to edit, launch, and debug your extension in [debugging-with-visual-studio-codespaces](#debugging-with-visual-studio-codespaces), a [debugging-in-a-custom-development-container](#debugging-in-a-custom-development-container), an [debugging-using-ssh](#debugging-using-ssh), or in [debugging-using-wsl](#debugging-using-wsl).
 
 Typically, your best starting point for testing is to use a remote environment that restricts port access (for example Codespaces, a container, or remote SSH hosts with a restrictive firewall) since extensions that work in these environments tend to work in less restrictive ones like WSL.
 
 ### Debugging with GitHub Codespaces
 
-Debugging your extension in [GitHub Codespaces](https://docs.github.com/github/developing-online-with-codespaces) preview can be a great starting point since you can use both VS Code and the Codespaces browser-based editor for testing and troubleshooting. You can also use a [[vs.1.7.#debugging-in-a-custom-development-container]] if preferred.
+Debugging your extension in [GitHub Codespaces](https://docs.github.com/github/developing-online-with-codespaces) preview can be a great starting point since you can use both VS Code and the Codespaces browser-based editor for testing and troubleshooting. You can also use a [debugging-in-a-custom-development-container](#debugging-in-a-custom-development-container) if preferred.
 
 Follow these steps:
 
@@ -299,7 +299,7 @@ export async function activate(context: vscode.ExtensionContext) {
 
 ### Forwarding localhost
 
-While the [[vs.1.7.#opening-something-in-a-local-browser-or-application]], there may also be situations where you want to forward something without actually launching a new browser window or application. This is where the `vscode.env.asExternalUri` API comes in.
+While the [opening-something-in-a-local-browser-or-application](#opening-something-in-a-local-browser-or-application), there may also be situations where you want to forward something without actually launching a new browser window or application. This is where the `vscode.env.asExternalUri` API comes in.
 
 > **Note:** Currently the forwarding mechanism in the Codespaces browser-based editor only supports **http and https requests**. However, you can interact with any TCP connection when connecting to a codespace from VS Code.
 
@@ -560,7 +560,7 @@ To solve this problem:
 
 1. Include (or dynamically acquire) both sets of binaries (Electron and standard Node.js) for the "modules" version in Node.js that VS Code ships.
 2. Check to see if `vscode.extensions.getExtension('your.extensionId').extensionKind === vscode.ExtensionKind.Workspace` to set up the correct binaries based on whether the extension is running remotely or locally.
-3. You may also want to add support for non-x86_64 targets and Alpine Linux at the same time by [[vs.1.7.#supporting-nonx8664-hosts-or-alpine-linux-containers]].
+3. You may also want to add support for non-x86_64 targets and Alpine Linux at the same time by [supporting-nonx8664-hosts-or-alpine-linux-containers](#supporting-nonx8664-hosts-or-alpine-linux-containers).
 
 You can find the "modules" version VS Code uses by going to **Help > Developer Tools** and typing `process.versions.modules` in the console. However, to make sure native modules work seamlessly in different Node.js environments, you may want to compile the native modules against all possible Node.js "modules" versions and platforms you want support (Electron Node.js, official Node.js Windows/Darwin/Linux, all versions). The [node-tree-sitter](https://github.com/tree-sitter/node-tree-sitter/releases/tag/v0.14.0) module is a good example of a module that does this well.
 
@@ -584,7 +584,7 @@ It is important to note that some third-party npm modules include native code th
 
 ## Avoid using Electron modules
 
-While it can be convenient to rely on built-in Electron or VS Code modules not exposed by the extension API, it's important to note that VS Code Server runs a standard (non-Electron) version of Node.js. These modules will be missing when running remotely. There are a few exceptions, [[vs.1.7.#persisting-secrets]], where there is specific code in place to make them work.
+While it can be convenient to rely on built-in Electron or VS Code modules not exposed by the extension API, it's important to note that VS Code Server runs a standard (non-Electron) version of Node.js. These modules will be missing when running remotely. There are a few exceptions, [persisting-secrets](#persisting-secrets), where there is specific code in place to make them work.
 
 Use base Node.js modules or modules in your extension VSIX to avoid these problems. If you absolutely have to use an Electron module, be sure to have a fallback if the module is missing.
 

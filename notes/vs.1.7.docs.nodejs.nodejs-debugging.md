@@ -22,9 +22,9 @@ The Visual Studio Code editor has built-in debugging support for the [Node.js](h
 
 There are a few ways you can debug your Node.js programs in VS Code:
 
-* Use [[vs.1.7.#auto-attach]] to debug processes you run in VS Code's integrated terminal.
-* Use the [[vs.1.7.#javascript-debug-terminal]], similar to using the integrated terminal.
-* Use a [[vs.1.7.#launch-configuration]] to start your program, or [[vs.1.7.#attaching-to-nodejs]] launched outside of VS Code.
+* Use [auto-attach](#auto-attach) to debug processes you run in VS Code's integrated terminal.
+* Use the [javascript-debug-terminal](#javascript-debug-terminal), similar to using the integrated terminal.
+* Use a [launch-configuration](#launch-configuration) to start your program, or [attaching-to-nodejs](#attaching-to-nodejs) launched outside of VS Code.
 
 ## Auto Attach
 
@@ -46,7 +46,7 @@ When auto attach is on, the `Auto Attach` item will appear in the status bar acr
 
 **Other Launch Configuration Properties**
 
-You can apply [[vs.1.7.#launch-configuration-attributes]] to auto attach in the **debug.javascript.terminalOptions** setting. For example, to add node internals to your skipFiles, you could add the following to your user or workspace settings:
+You can apply [launch-configuration-attributes](#launch-configuration-attributes) to auto attach in the **debug.javascript.terminalOptions** setting. For example, to add node internals to your skipFiles, you could add the following to your user or workspace settings:
 
 ```js
   "debug.javascript.terminalOptions": {
@@ -80,7 +80,7 @@ In `smart` Auto Attach mode, VS Code will try to attach to your code, and not at
 
 ## JavaScript Debug Terminal
 
-In a similar way to [[vs.1.7.#auto-attach]], the JavaScript Debug Terminal will automatically debug any Node.js process you run in it. You can create a Debug Terminal by running the **Debug: Create JavaScript Debug Terminal** command from the Command Palette (`kbs(workbench.action.showCommands)`), or by selecting the **Create JavaScript Debug Terminal** from the terminal switcher dropdown.
+In a similar way to [auto-attach](#auto-attach), the JavaScript Debug Terminal will automatically debug any Node.js process you run in it. You can create a Debug Terminal by running the **Debug: Create JavaScript Debug Terminal** command from the Command Palette (`kbs(workbench.action.showCommands)`), or by selecting the **Create JavaScript Debug Terminal** from the terminal switcher dropdown.
 
 ![Create Debug Terminal](/assets/create-debug-terminal-poo80dv55gfc.png)
 
@@ -88,7 +88,7 @@ In a similar way to [[vs.1.7.#auto-attach]], the JavaScript Debug Terminal will 
 
 **Other Launch Configuration Properties**
 
-You can apply [[vs.1.7.#launch-configuration-attributes]] to the debug terminal in the **debug.javascript.terminalOptions** setting. For example, to add node internals to your skipFiles, you could add the following to your user or workspace settings:
+You can apply [launch-configuration-attributes](#launch-configuration-attributes) to the debug terminal in the **debug.javascript.terminalOptions** setting. For example, to add node internals to your skipFiles, you could add the following to your user or workspace settings:
 
 ```js
 "debug.javascript.terminalOptions": {

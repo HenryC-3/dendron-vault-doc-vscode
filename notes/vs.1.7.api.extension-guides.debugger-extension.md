@@ -141,7 +141,7 @@ Since we already had an active debug session for the extension the VS Code debug
 Now we are able to debug both the extension and the DA simultaneously.
 A faster way to arrive here is by using the **Extension + Server** launch configuration which launches both sessions automatically.
 
-An alternative, even simpler approach for debugging the extension and the DA can be found [[vs.1.7.#alternative-approach-to-develop-a-debugger-extension]].
+An alternative, even simpler approach for debugging the extension and the DA can be found [alternative-approach-to-develop-a-debugger-extension](#alternative-approach-to-develop-a-debugger-extension).
 
 Set a breakpoint at the beginning of method `launchRequest(...)` in file `src/mockDebug.ts` and as a last step configure the mock debugger to connect to the DA server by adding a `debugServer` attribute for port `4711` to your mock test launch config:
 
@@ -307,7 +307,7 @@ The **initialConfigurations** define the initial content of the default `launch.
 
 ![Debugger Quickpick](/assets/debug-init-config-jasl8at7p4lw.png)
 
-Instead of defining the initial content of the `launch.json` statically in the `package.json`, it is possible to compute the initial configurations dynamically by implementing a `DebugConfigurationProvider` (for details see the section [[vs.1.7.#using-a-debugconfigurationprovider]]).
+Instead of defining the initial content of the `launch.json` statically in the `package.json`, it is possible to compute the initial configurations dynamically by implementing a `DebugConfigurationProvider` (for details see the section [using-a-debugconfigurationprovider](#using-a-debugconfigurationprovider)).
 
 **configurationSnippets** define launch configuration snippets that get surfaced in IntelliSense when editing the `launch.json`. As a convention, prefix the `label` attribute of a snippet by the debug environment name so that it can be clearly identified when presented in a list of many snippet proposals.
 

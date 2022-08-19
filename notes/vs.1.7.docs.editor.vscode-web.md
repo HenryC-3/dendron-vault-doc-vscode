@@ -19,13 +19,13 @@ Visual Studio Code for the Web provides a free, zero-install Microsoft Visual St
 
 VS Code for the Web has many of the features of VS Code desktop that you love, including search and syntax highlighting while browsing and editing, along with extension support to work on your codebase and make simpler edits. In addition to opening repositories, forks, and pull requests from source control providers like GitHub and Azure Repos (in preview), you can also work with code that is stored on your local machine.
 
-VS Code for the Web runs entirely in your web browser, so there are certain limitations compared to the desktop experience, which you can read more about [[vs.1.7.#limitations]].
+VS Code for the Web runs entirely in your web browser, so there are certain limitations compared to the desktop experience, which you can read more about [limitations](#limitations).
 
 ## Relationship to VS Code desktop
 
 VS Code for the Web provides a browser-based experience for navigating files and repositories and committing lightweight code changes. However, if you need access to a runtime to run, build, or debug your code, or you want to use platform features such as a terminal, we recommend moving your work to the desktop application or [GitHub Codespaces](https://github.com/features/codespaces) for the full capabilities of VS Code. In addition, VS Code desktop lets you run extensions that aren't supported in the web version, and use a full set of keyboard shortcuts not limited by your browser.
 
-When you're ready to switch, you'll be able to [[vs.1.7.#continue-working-in-a-different-environment]] to the full VS Code desktop experience with a few clicks.
+When you're ready to switch, you'll be able to [continue-working-in-a-different-environment](#continue-working-in-a-different-environment) to the full VS Code desktop experience with a few clicks.
 
 You can also switch between the Stable and Insiders versions of VS Code for the Web by selecting the gear icon, then **Switch to Insiders Version...**, or by navigating directly to [https://insiders.vscode.dev](https://insiders.vscode.dev).
 
@@ -165,7 +165,7 @@ You can use VS Code for the Web in Chrome, Edge, Firefox, and Safari.
 
 Webviews might appear differently or have some unexpected behavior in Firefox and Safari. You can view issue queries in the VS Code GitHub repo to track issues related to specific browsers, such as with the [Safari label](https://github.com/microsoft/vscode/labels/safari) and [Firefox label](https://github.com/microsoft/vscode/labels/firefox).
 
-There are additional steps you can take to improve your browser experience using VS Code for the Web. Review the [[vs.1.7.#additional-browser-setup]] section for more information.
+There are additional steps you can take to improve your browser experience using VS Code for the Web. Review the [additional-browser-setup](#additional-browser-setup) section for more information.
 
 ### Mobile support
 

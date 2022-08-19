@@ -61,7 +61,7 @@ The VS Code Server that is injected runs as the same user you used to sign in to
 
 ### Can VS Code Server be installed or used on its own?
 
-No. The VS Code Server is a component of the Remote Development extensions and is managed by a VS Code client. It is installed and updated automatically by VS Code when it connects to an endpoint and if installed separately could become quickly out of date. It is not intended or [[vs.1.7.#license-and-privacy]] for use by other clients.
+No. The VS Code Server is a component of the Remote Development extensions and is managed by a VS Code client. It is installed and updated automatically by VS Code when it connects to an endpoint and if installed separately could become quickly out of date. It is not intended or [license-and-privacy](#license-and-privacy) for use by other clients.
 
 ### What are the connectivity requirements for VS Code Server?
 

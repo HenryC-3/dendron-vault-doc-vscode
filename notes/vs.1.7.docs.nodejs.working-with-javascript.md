@@ -47,7 +47,7 @@ Type declaration files are automatically downloaded and managed by Visual Studio
 }
 ```
 
-You can alternately explicitly list packages to acquire type declaration files for in a [[vs.1.7.#javascript-projects-jsconfigjson]].
+You can alternately explicitly list packages to acquire type declaration files for in a [javascript-projects-jsconfigjson](#javascript-projects-jsconfigjson).
 
 ```json
 {
@@ -63,7 +63,7 @@ Most common JavaScript libraries ship with declaration files or have type declar
 
 ### Fixing npm not installed warning for Automatic Type Acquisition
 
-[[vs.1.7.#typings-and-automatic-type-acquisition]] uses [npm](https://www.npmjs.com), the Node.js package manager, to install and manage Type Declaration (typings) files. To ensure that Automatic Type Acquisition works properly, first ensure that you have npm installed on your machine.
+[typings-and-automatic-type-acquisition](#typings-and-automatic-type-acquisition) uses [npm](https://www.npmjs.com), the Node.js package manager, to install and manage Type Declaration (typings) files. To ensure that Automatic Type Acquisition works properly, first ensure that you have npm installed on your machine.
 
 Run `npm --version` from a terminal or command prompt to quickly check that npm is installed and available.
 
@@ -247,7 +247,7 @@ If you try to use `// @ts-check` with the above code, you'll see a number of err
 
 If you want to continue using `// @ts-check` but are confident that these are not actual issues with your application, you have to let TypeScript know about these global variables.
 
-To start, [[vs.1.7.#javascript-projects-jsconfigjson]] at the root of your project:
+To start, [javascript-projects-jsconfigjson](#javascript-projects-jsconfigjson) at the root of your project:
 
 ```json
 {

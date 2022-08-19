@@ -17,7 +17,7 @@ MetaDescription: Uninstall Visual Studio Code and clean up.
 
 The steps for uninstalling Visual Studio Code will depend on your platform (Windows, macOS, or Linux) and the install option that you used. For example on Windows, you can use the System or User Windows Installers or download a `.zip` file and extract the contents anywhere on your machine.
 
-In general, you would uninstall VS Code as you would any other desktop application and follow your platform's recommended flow for uninstalling software. Specific platform guidance is provided below as well as how to [[vs.1.7.#clean-uninstall]] any remaining VS Code configuration files.
+In general, you would uninstall VS Code as you would any other desktop application and follow your platform's recommended flow for uninstalling software. Specific platform guidance is provided below as well as how to [clean-uninstall](#clean-uninstall) any remaining VS Code configuration files.
 
 ## Windows
 

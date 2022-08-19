@@ -60,7 +60,7 @@ The most common example of this is using a project's workspace dependencies, suc
 
 ### Does my extension use settings that determine code execution that can be defined in the workspace?
 
-Your extension might use settings values as flags to a CLI that your extension executes. If these settings are overridden by a malicious workspace, they could be used as an attack vector against your extension. On the other hand, if the settings' values are only used to detect certain conditions, then it may not be a security risk and does not require Workspace Trust. For example, an extension might check whether the value of a preferred shell setting is `bash` or `pwsh` to determine what documentation to show. The [[vs.1.7.#configurations-settings]] section below has guidance on settings to help you find the optimal configuration for your extension.
+Your extension might use settings values as flags to a CLI that your extension executes. If these settings are overridden by a malicious workspace, they could be used as an attack vector against your extension. On the other hand, if the settings' values are only used to detect certain conditions, then it may not be a security risk and does not require Workspace Trust. For example, an extension might check whether the value of a preferred shell setting is `bash` or `pwsh` to determine what documentation to show. The [configurations-settings](#configurations-settings) section below has guidance on settings to help you find the optimal configuration for your extension.
 
 This is not an exhaustive list of cases that might require Workspace Trust. As we review more extensions, we will update this list. Use this list to think of similar behavior your extension might be doing when considering Workspace Trust.
 

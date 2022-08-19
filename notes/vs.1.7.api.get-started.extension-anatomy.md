@@ -23,7 +23,7 @@ The `Hello World` extension does 3 things:
 Understanding these three concepts is crucial to writing extensions in VS Code:
 
 - [[vs.1.7.api.references.activation-events]]: events upon which your extension becomes active.
-- [[vs.1.7.api.references.contribution-points]]: static declarations that you make in the `package.json` [[vs.1.7.#extension-manifest]] to extend VS Code.
+- [[vs.1.7.api.references.contribution-points]]: static declarations that you make in the `package.json` [extension-manifest](#extension-manifest) to extend VS Code.
 - [[vs.1.7.api.references.vscode-api]]: a set of JavaScript APIs that you can invoke in your extension code.
 
 In general, your extension would use a combination of Contribution Points and VS Code API to extend VS Code's functionality. The [[vs.1.7.api.extension-capabilities.overview]] topic helps you find the right Contribution Point and VS Code API for your extension.

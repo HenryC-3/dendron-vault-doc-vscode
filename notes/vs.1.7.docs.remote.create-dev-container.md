@@ -28,7 +28,7 @@ In this document, we'll go through the steps for creating a development (dev) co
 
 After any of the steps above, you'll have a fully functioning dev container, and you can either continue to the next step of this tutorial to add more features, or stop and begin working in the dev environment you currently have.
 
-> Note: The Remote - Containers extension has a **Remote-Containers: Add Development Container Configuration Files...** command that lets you pick a pre-defined container configuration from a list. If you'd prefer to have a complete dev container immediately rather than building up the `devcontainer.json` and Dockerfile step-by-step, you can skip ahead to [[vs.1.7.#automate-dev-container-creation]].
+> Note: The Remote - Containers extension has a **Remote-Containers: Add Development Container Configuration Files...** command that lets you pick a pre-defined container configuration from a list. If you'd prefer to have a complete dev container immediately rather than building up the `devcontainer.json` and Dockerfile step-by-step, you can skip ahead to [automate-dev-container-creation](#automate-dev-container-creation).
 
 ## Create a devcontainer.json file
 
@@ -81,7 +81,7 @@ After running this command, when VS Code restarts, you're now within a Node.js a
 Through a `devcontainer.json` file, you can:
 
 * Spin up a stand-alone container to isolate your toolchain or speed up setup.
-* Work with a container deployed application defined by an image, [[vs.1.7.#dockerfile]], or [[vs.1.7.#use-docker-compose]].
+* Work with a container deployed application defined by an image, [dockerfile](#dockerfile), or [use-docker-compose](#use-docker-compose).
 * [[vs.1.7.remote.advancedcontainers.use-docker-kubernetes]] from inside a dev container to build and deploy your app.
 
 If `devcontainer.json`'s supported workflows do not meet your needs, you can also [[vs.1.7.docs.remote.attach-container]].
@@ -251,7 +251,7 @@ You can either:
 
 1. Work with a service defined in an existing, unmodified `docker-compose.yml`.
 2. Create a new `docker-compose.yml` (or make a copy of an existing one) that you use to develop a service.
-3. [[vs.1.7.#extend-your-docker-compose-file-for-development]] to develop the service.
+3. [extend-your-docker-compose-file-for-development](#extend-your-docker-compose-file-for-development) to develop the service.
 4. Use separate VS Code windows to [[vs.1.7.remote.advancedcontainers.connect-multiple-containers]] at once.
 
 > **Note:** When using Alpine Linux containers, some extensions may not work due to `glibc` dependencies in native code inside the extension.
@@ -297,7 +297,7 @@ You can also create a development copy of your Docker Compose file. For example,
 "dockerComposeFile": "docker-compose.devcontainer.yml"
 ```
 
-However, a better approach is often to avoid making a copy of your Docker Compose file by **extending it with another one**. We'll cover [[vs.1.7.#extend-your-docker-compose-file-for-development]] in the next section.
+However, a better approach is often to avoid making a copy of your Docker Compose file by **extending it with another one**. We'll cover [extend-your-docker-compose-file-for-development](#extend-your-docker-compose-file-for-development) in the next section.
 
 To avoid having the container shut down if the default container command fails or exits, you can modify your Docker Compose file for the service you have specified in `devcontainer.json` as follows:
 
@@ -333,7 +333,7 @@ user: your-user-name-here
 
 If you aren't creating a custom Dockerfile for development, you may want to install additional developer tools such as `curl` inside the service's container. While less efficient than adding these tools to the container image, you can also use the `postCreateCommand` property for this purpose.
 
-See [[vs.1.7.#install-additional-software]] for more information on installing software and the [[vs.1.7.docs.remote.devcontainerjson-reference]] for more information about the `postCreateCommand` property.
+See [install-additional-software](#install-additional-software) for more information on installing software and the [[vs.1.7.docs.remote.devcontainerjson-reference]] for more information about the `postCreateCommand` property.
 
 If your application was built using C++, Go, or Rust, or another language that uses a ptrace-based debugger, you will also need to add the following settings to your Docker Compose file:
 
@@ -366,7 +366,7 @@ For example:
 
 * Docker Compose will shut down a container if its entry point shuts down. This is problematic for situations where you are debugging and need to restart your app on a repeated basis.
 * You also may not be mapping the local filesystem into the container or exposing ports to other resources like databases you want to access.
-* You may want to copy the contents of your local `.ssh` folder into the container or set the ptrace options described above in [[vs.1.7.#use-docker-compose]].
+* You may want to copy the contents of your local `.ssh` folder into the container or set the ptrace options described above in [use-docker-compose](#use-docker-compose).
 
 You can solve these and other issues like them by extending your entire Docker Compose configuration with [multiple `docker-compose.yml` files](https://docs.docker.com/compose/extends/#multiple-compose-files) that override or supplement your primary one.
 

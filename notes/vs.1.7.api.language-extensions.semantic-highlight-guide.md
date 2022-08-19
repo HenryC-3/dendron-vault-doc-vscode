@@ -133,7 +133,7 @@ Standard token modifiers:
 | `documentation`| For occurrences of symbols in documentation.  |
 | `defaultLibrary`| For symbols that are part of the standard library.  |
 
-Along with the standard types and modifiers, VS Code defines a mapping of types and modifiers to similar TextMate scopes. That's covered in the section [[vs.1.7.#semantic-token-scope-map]].
+Along with the standard types and modifiers, VS Code defines a mapping of types and modifiers to similar TextMate scopes. That's covered in the section [semantic-token-scope-map](#semantic-token-scope-map).
 
 ### Custom token types and modifiers
 
@@ -168,7 +168,7 @@ In the example above, an extension declares a new type `templateType` and a new 
 
 The `semanticTokenColors` value `"#ff0011"` shown above applies to both `type` and all it's subtypes, including `templateType`.
 
-Along with custom token types, extensions can define how these are mapped to TextMate scopes. This is described in the [[vs.1.7.#custom-textmate-scope-mappings]] section. Note that custom mapping rules are not automatically inherited from the super type. Instead, subtypes need to redefine the mapping, preferably to more specific scopes.
+Along with custom token types, extensions can define how these are mapped to TextMate scopes. This is described in the [custom-textmate-scope-mappings](#custom-textmate-scope-mappings) section. Note that custom mapping rules are not automatically inherited from the super type. Instead, subtypes need to redefine the mapping, preferably to more specific scopes.
 
 ## Enablement of semantic highlighting
 
@@ -231,7 +231,7 @@ Here are other examples of selectors and styles:
 - `"*.declaration": { "bold": true } // all declarations are bold`
 - `"class:java": { "foreground": "#0f0", "italic": true } // classes in java`
 
-If no rule matches or the theme has no `semanticTokenColors` section (but `semanticHighlighting` enabled), VS Code uses the [[vs.1.7.#semantic-token-scope-map]] to evaluate a TextMate scope for the given semantic token. That scope is matched against the themes TextMate theming rules in `tokenColors`.
+If no rule matches or the theme has no `semanticTokenColors` section (but `semanticHighlighting` enabled), VS Code uses the [semantic-token-scope-map](#semantic-token-scope-map) to evaluate a TextMate scope for the given semantic token. That scope is matched against the themes TextMate theming rules in `tokenColors`.
 
 ## Semantic token scope map
 

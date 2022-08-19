@@ -75,7 +75,7 @@ There are many extensions that provide additional snippets, including snippets f
 
 ## JSDoc support
 
-VS Code understands many standard [JSDoc](https://jsdoc.app) annotations, and uses these annotations to provide rich [[vs.1.7.#intellisense]]. You can optionally even use the type information from JSDoc comments to [[vs.1.7.#type-checking]].
+VS Code understands many standard [JSDoc](https://jsdoc.app) annotations, and uses these annotations to provide rich [intellisense](#intellisense). You can optionally even use the type information from JSDoc comments to [type-checking](#type-checking).
 
 <video src="/docs/languages/javascript/jsdoc-autofill.mp4" placeholder="images/javascript/jsdoc-autofill-placeholder.png" autoplay loop controls muted>
     Sorry, your browser doesn't support HTML 5 video.
@@ -109,7 +109,7 @@ Signature help is shown automatically when you type a `(` or `,` within a functi
 
 Automatic imports speed up coding by suggesting available variables throughout your project and its dependencies. When you select one of these suggestions, VS Code automatically adds an import for it to the top of the file.
 
-Just start typing to see [[vs.1.7.#intellisense]] for all available JavaScript symbols in your current project. Auto import suggestions show where they will be imported from:
+Just start typing to see [intellisense](#intellisense) for all available JavaScript symbols in your current project. Auto import suggestions show where they will be imported from:
 
 ![Global symbols are shown in the suggestion list](/assets/auto-import-before-31i8016e4iii.png)
 

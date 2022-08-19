@@ -174,7 +174,7 @@ Finally, if updating your webviews is expensive, consider [debouncing](https://d
 
 ## Custom Editor
 
-`CustomEditorProvider` and `CustomReadonlyEditorProvider` let you create custom editors for binary file formats. This API gives your full control over the file is displayed to users, how edits are made to it, and lets your extension hook into `save` and other file operations. Again, if you are building an editor for a text based file format, strongly consider using a [[vs.1.7.#custom-text-editor]] instead as they are far simpler to implement.
+`CustomEditorProvider` and `CustomReadonlyEditorProvider` let you create custom editors for binary file formats. This API gives your full control over the file is displayed to users, how edits are made to it, and lets your extension hook into `save` and other file operations. Again, if you are building an editor for a text based file format, strongly consider using a [custom-text-editor](#custom-text-editor) instead as they are far simpler to implement.
 
 The [custom editor extension sample][sample] includes a simple example custom binary editor for paw draw files (which are just jpeg files that end with a `.pawdraw` file extension). Let's take a look at what goes into building a custom editor for binary files.
 

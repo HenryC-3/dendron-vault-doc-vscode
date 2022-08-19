@@ -16,7 +16,7 @@ Visual Studio Code supports running and debugging tests for your extension. Thes
 
 ## Overview
 
-_If you are migrating from `vscode`, see [[vs.1.7.#migrating-from-vscode]]_.
+_If you are migrating from `vscode`, see [migrating-from-vscode](#migrating-from-vscode)_.
 
 If you are using the [Yeoman Generator](https://code.visualstudio.com/api/get-started/your-first-extension) to scaffold an extension, integration tests are already created for you.
 
@@ -290,9 +290,9 @@ The [`vscode`](https://github.com/microsoft/vscode-extension-vscode) module had 
 - As the old `vscode` module was also used for downloading VS Code type definition, you need to
   - Manually install `@types/vscode` that follows your `engine.vscode` in `package.json`. For example, if your `engine.vscode` is `1.30`, install `"@types/vscode": "^1.30.0"`.
   - Remove `"postinstall": "node ./node_modules/vscode/bin/install"` from `package.json`.
-- Add a [[vs.1.7.#the-test-script]]. You can use [`runTest.ts`](https://github.com/microsoft/vscode-extension-samples/blob/main/helloworld-test-sample/src/test/runTest.ts) in the sample as a starting point.
+- Add a [the-test-script](#the-test-script). You can use [`runTest.ts`](https://github.com/microsoft/vscode-extension-samples/blob/main/helloworld-test-sample/src/test/runTest.ts) in the sample as a starting point.
 - Point the `test` script in `package.json` to run the compiled output of `runTest.ts`.
-- Add a [[vs.1.7.#the-test-runner-script]]. You can use the [sample test runner script](https://github.com/microsoft/vscode-extension-samples/blob/main/helloworld-test-sample/src/test/suite/index.ts) as a starting point. Notice that `vscode` used to depend on `mocha@4` and `glob`, and now you need to install them as part of your `devDependencies`.
+- Add a [the-test-runner-script](#the-test-runner-script). You can use the [sample test runner script](https://github.com/microsoft/vscode-extension-samples/blob/main/helloworld-test-sample/src/test/suite/index.ts) as a starting point. Notice that `vscode` used to depend on `mocha@4` and `glob`, and now you need to install them as part of your `devDependencies`.
 
 ## Next steps
 

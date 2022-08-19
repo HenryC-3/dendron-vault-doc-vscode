@@ -308,9 +308,9 @@ In summary, the general steps are:
 
 1. Rather than firing `testAdapter.tests` when you discover or rediscover tests, instead create and push tests into `controller.items`, for example by calling `controller.items.replace` with an array of discovered tests that are created by calling `vscode.test.createTestItem`. Note that, as tests change, you can mutate properties on the test item and update their children, and changes will be reflected automatically in VS Code's UI.
 
-1. To load tests initially, instead of waiting for a `testAdapter.load()` method call, set `controller.resolveHandler = () => { /* discover tests */ }`. See more information around how test discovery works in [[vs.1.7.#discovering-tests]].
+1. To load tests initially, instead of waiting for a `testAdapter.load()` method call, set `controller.resolveHandler = () => { /* discover tests */ }`. See more information around how test discovery works in [discovering-tests](#discovering-tests).
 
-1. To run tests, you should create a [[vs.1.7.#running-tests]] with a handler function that calls `const run = controller.createTestRun(request)`. Instead of firing a `testStates` event, pass `TestItem`s to methods on the `run` to update their state.
+1. To run tests, you should create a [running-tests](#running-tests) with a handler function that calls `const run = controller.createTestRun(request)`. Instead of firing a `testStates` event, pass `TestItem`s to methods on the `run` to update their state.
 
 ## Additional contribution points
 

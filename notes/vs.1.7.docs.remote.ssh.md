@@ -108,7 +108,7 @@ To connect to a remote host for the first time, follow these steps:
 
     ![File Open on a remote SSH host](/assets/ssh-open-folder-ijy86vez2h8m.png)
 
-From here, [[vs.1.7.#managing-extensions]] you want to use when connected to the host and start editing!
+From here, [managing-extensions](#managing-extensions) you want to use when connected to the host and start editing!
 
 > **Note:** On ARMv7l / ARMv8l `glibc` SSH hosts, some extensions may not work due to x86 compiled native code inside the extension.
 
@@ -120,7 +120,7 @@ To do so:
 
 1. Follow the [[vs.1.7.docs.remote.containers.md#installation]] steps for the Remote - Containers extension on your remote host.
 1. **Optional:** Set up SSH [[vs.1.7.docs.remote.troubleshooting.md#configuring-key-based-authentication]] to the server so you do not need to enter your password multiple times.
-1. Follow the [[vs.1.7.#connect-to-a-remote-host]] for the Remote - SSH extension to connect to a host and open a folder there.
+1. Follow the [connect-to-a-remote-host](#connect-to-a-remote-host) for the Remote - SSH extension to connect to a host and open a folder there.
 1. Use the **Remote-Containers: Reopen in Container** command from the Command Palette (`kbstyle(F1)`, `kb(workbench.action.showCommands)`).
 
 The rest of the [[vs.1.7.docs.remote.containers.md#quick-start-open-an-existing-folder-in-a-container]] applies as-is. You can learn more about the [[vs.1.7.docs.remote.containers]]. You can also see the [[v[[vs.1.7.remote.advancedcontainers.develop-remote-host]]ticle for other options if this model does not meet your needs.
@@ -248,7 +248,7 @@ Right-click the tunnel you want to modify, and select **Change Local Port** in t
 
 ### Always forwarding a port
 
-If you have ports that you **always want to forward**, you can use the `LocalForward` directive in the same SSH config file you use to [[vs.1.7.#remember-hosts-and-advanced-settings]].
+If you have ports that you **always want to forward**, you can use the `LocalForward` directive in the same SSH config file you use to [remember-hosts-and-advanced-settings](#remember-hosts-and-advanced-settings).
 
 For example, if you wanted to forward ports 3000 and 27017, you could update the file as follows:
 

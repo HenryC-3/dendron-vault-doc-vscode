@@ -20,7 +20,7 @@ The [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-py
 
 ## A little background on unit testing
 
-(If you're already familiar with unit testing, you can skip to the [[vs.1.7.#example-test-walkthroughs]].)
+(If you're already familiar with unit testing, you can skip to the [example-test-walkthroughs](#example-test-walkthroughs).)
 
 A **unit** is a specific piece of code to be tested, such as a function or a class. **Unit tests** are then other pieces of code that specifically exercise the code unit with a full range of different inputs, including boundary and edge cases.
 
@@ -98,7 +98,7 @@ Once you have the Python extension installed and a Python file open within the e
 
 ![Configure Python Tests button displayed in the Test Explorer when tests haven't been configured.](/assets/test-explorer-no-tests-esu9jx4wo1ds.png)
 
-You can configure your tests anytime by using the **Python: Configure Tests** command from the [[vs.1.7.docs.getstarted.userinterface.md#command-palette]]. You can also configure testing manually by setting either `python.testing.unittestEnabled` or `python.testing.pytestEnabled` to true. Each framework also has specific configuration settings as described under [[vs.1.7.#test-configuration-settings]] for their folders and patterns.
+You can configure your tests anytime by using the **Python: Configure Tests** command from the [[vs.1.7.docs.getstarted.userinterface.md#command-palette]]. You can also configure testing manually by setting either `python.testing.unittestEnabled` or `python.testing.pytestEnabled` to true. Each framework also has specific configuration settings as described under [test-configuration-settings](#test-configuration-settings) for their folders and patterns.
 
 If both frameworks are enabled, then the Python extension will only run `pytest`.
 
@@ -149,7 +149,7 @@ By default, the Python extension attempts to discover tests once you enable a fr
 
 `python.testing.autoTestDiscoverOnSaveEnabled` is set to `true` by default, meaning that test discovery is also performed automatically whenever you add, delete, or update any Python file in the workspace. To disable this feature, set the value to `false`. You will need to reload the window for this setting to take effect.
 
-Test discovery applies the discovery patterns for the current framework (which can be customized using the [[vs.1.7.#test-configuration-settings]]). The default behavior is as follows:
+Test discovery applies the discovery patterns for the current framework (which can be customized using the [test-configuration-settings](#test-configuration-settings)). The default behavior is as follows:
 
 - `python.testing.unittestArgs`: Looks for any Python (`.py`) file with "test" in the name in the top-level project folder. All test files must be importable modules or packages. You can customize the file matching pattern with the `-p` configuration setting, and customize the folder with the `-t` setting.
 
@@ -165,7 +165,7 @@ If discovery fails (for example, the test framework isn't installed or you have 
 
 ![Discovery failure error messaged displayed in the Test Explorer](/assets/test-discovery-error-la0mnphmrbip.png)
 
-Once VS Code recognizes tests, it provides several ways to run those tests as described in [[vs.1.7.#run-tests]].
+Once VS Code recognizes tests, it provides several ways to run those tests as described in [run-tests](#run-tests).
 
 ## Run tests
 
@@ -360,7 +360,7 @@ See [unittest command-line interface](https://docs.python.org/3/library/unittest
 You can also configure pytest using a `pytest.ini` file as described on [pytest Configuration](https://docs.pytest.org/en/latest/reference/customize.html).
 
 > **Note**
-> If you have the pytest-cov coverage module installed, VS Code doesn't stop at breakpoints while debugging because pytest-cov is using the same technique to access the source code being run. To prevent this behavior, include `--no-cov` in `pytestArgs` when debugging tests, for example by adding `"env": {"PYTEST_ADDOPTS": "--no-cov"}` to your debug configuration. (See [[vs.1.7.#debug-tests]] above about how to set up that launch configuration.) (For more information, see [Debuggers and PyCharm](https://pytest-cov.readthedocs.io/en/latest/debuggers.html) in the pytest-cov documentation.)
+> If you have the pytest-cov coverage module installed, VS Code doesn't stop at breakpoints while debugging because pytest-cov is using the same technique to access the source code being run. To prevent this behavior, include `--no-cov` in `pytestArgs` when debugging tests, for example by adding `"env": {"PYTEST_ADDOPTS": "--no-cov"}` to your debug configuration. (See [debug-tests](#debug-tests) above about how to set up that launch configuration.) (For more information, see [Debuggers and PyCharm](https://pytest-cov.readthedocs.io/en/latest/debuggers.html) in the pytest-cov documentation.)
 
 ## See also
 

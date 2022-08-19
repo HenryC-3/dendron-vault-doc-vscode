@@ -42,7 +42,7 @@ To successfully complete this Django tutorial, you must do the following (which 
 
 ## Create a project environment for the Django tutorial
 
-In this section, you create a virtual environment in which Django is installed. Using a virtual environment avoids installing Django into a global Python environment and gives you exact control over the libraries used in an application. A virtual environment also makes it easy to [[vs.1.7.#create-a-requirementstxt-file-for-the-environment]].
+In this section, you create a virtual environment in which Django is installed. Using a virtual environment avoids installing Django into a global Python environment and gives you exact control over the libraries used in an application. A virtual environment also makes it easy to [create-a-requirementstxt-file-for-the-environment](#create-a-requirementstxt-file-for-the-environment).
 
 1. On your file system, create a project folder for this tutorial, such as `hello_django`.
 
@@ -128,7 +128,7 @@ To create a minimal Django app, then, it's necessary to first create the Django 
     python manage.py migrate
     ```
 
-    When you run the server the first time, it creates a default SQLite database in the file `db.sqlite3` that is intended for development purposes, but can be used in production for low-volume web apps. For additional information about databases, see the [[vs.1.7.#types-of-databases]] section.
+    When you run the server the first time, it creates a default SQLite database in the file `db.sqlite3` that is intended for development purposes, but can be used in production for low-volume web apps. For additional information about databases, see the [types-of-databases](#types-of-databases) section.
 
 1. To verify the Django project, make sure your virtual environment is activated, then start Django's development server using the command `python manage.py runserver`. The server runs on the default port 8000, and you see output like the following output in the terminal window:
 

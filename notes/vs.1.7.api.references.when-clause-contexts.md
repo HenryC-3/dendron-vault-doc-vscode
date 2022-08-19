@@ -36,7 +36,7 @@ Not | `!` | `!editorReadonly`
 Matches | `=~` | `"resourceScheme =~ /^untitled$\|^file$/"`
 Greater than | `>` `>=` | `"gitOpenRepositoryCount >= 1"`
 Less than | `<` `<=` | `"workspaceFolderCount < 2"`
-In | `in` | `resourceFilename in supportedFolders` ([[vs.1.7.#in-conditional-operator]] below)
+In | `in` | `resourceFilename in supportedFolders` ([in-conditional-operator](#in-conditional-operator) below)
 
 ### key-value when clause operator
 
@@ -253,6 +253,6 @@ When you run **Developer: Inspect Context Keys**, your cursor will highlight ele
 
 ![Inspect Context Keys output](/assets/inspect-context-keys-izhrtvojzmjv.png)
 
-The list of active context keys is extensive and may contain [[vs.1.7.#add-a-custom-when-clause-context]] from extensions you have installed.
+The list of active context keys is extensive and may contain [add-a-custom-when-clause-context](#add-a-custom-when-clause-context) from extensions you have installed.
 
 >**Note**: Some context keys are for VS Code internal use and may change in the future.

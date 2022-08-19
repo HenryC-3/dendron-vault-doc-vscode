@@ -16,10 +16,10 @@ Syntax highlighting determines the color and style of source code displayed in t
 
 There are two components to syntax highlighting:
 
-- [[vs.1.7.#tokenization]]: Breaking text into a list of tokens
-- [[vs.1.7.#theming]]: Using themes or user settings to map the tokens to specific colors and styles
+- [tokenization](#tokenization): Breaking text into a list of tokens
+- [theming](#theming): Using themes or user settings to map the tokens to specific colors and styles
 
-Before diving into the details, a good start is to play with the [[vs.1.7.#scope-inspector]] tool and explore what tokens are present in a source file and what theme rules they match to. To see both semantic and syntax token, use a built-in theme (for example, Dark+) on a TypeScript file.
+Before diving into the details, a good start is to play with the [scope-inspector](#scope-inspector) tool and explore what tokens are present in a source file and what theme rules they match to. To see both semantic and syntax token, use a built-in theme (for example, Dark+) on a TypeScript file.
 
 ## Tokenization
 
@@ -49,7 +49,7 @@ Each token is associated with a scope that defines the context of the token. A s
 
 Themes map scopes to colors and styles to provide syntax highlighting. TextMate provides [list of common scopes][tm-grammars] that many themes target. In order to have your grammar as broadly supported as possible, try to build on existing scopes rather than defining new ones.
 
-Scopes nest so that each token is also associated with a list of parent scopes. The example below uses the [[vs.1.7.#scope-inspector]] to show the scope hierarchy for the `+` operator in a simple JavaScript function. The most specific scope is listed at the top, with more general parent scopes listed below:
+Scopes nest so that each token is also associated with a list of parent scopes. The example below uses the [scope-inspector](#scope-inspector) to show the scope hierarchy for the `+` operator in a simple JavaScript function. The most specific scope is listed at the top, with more general parent scopes listed below:
 
 ![syntax highlighting scopes](/assets/scopes-yceio0uur941.png)
 
@@ -249,7 +249,7 @@ For this example, we'll create a simple injection grammar that highlights `TODO`
 }
 ```
 
-The grammar itself is a standard TextMate grammar except for the top level `injectionSelector` entry. The `injectionSelector` is a scope selector that specifies which scopes the injected grammar should be applied in. For our example, we want to highlight the word `TODO` in all `//` comments. Using the [[vs.1.7.#scope-inspector]], we find that JavaScript's double slash comments have the scope `comment.line.double-slash`, so our injection selector is `L:comment.line.double-slash`:
+The grammar itself is a standard TextMate grammar except for the top level `injectionSelector` entry. The `injectionSelector` is a scope selector that specifies which scopes the injected grammar should be applied in. For our example, we want to highlight the word `TODO` in all `//` comments. Using the [scope-inspector](#scope-inspector), we find that JavaScript's double slash comments have the scope `comment.line.double-slash`, so our injection selector is `L:comment.line.double-slash`:
 
 ```json
 {

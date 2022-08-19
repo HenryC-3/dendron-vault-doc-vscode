@@ -27,10 +27,10 @@ VS Code provides various APIs that allow you to add your own components to the W
 
 ![workbench-contribution](/assets/workbench-contribution-qt45i662vhhh.png)
 
-- Activity Bar: The [Azure App Service extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) adds a [[vs.1.7.#views-container]]
-- Side Bar: The built-in [NPM extension](https://github.com/microsoft/vscode/tree/main/extensions/npm) adds a [[vs.1.7.#tree-view]] to the Explorer View
-- Editor Group: The built-in [Markdown extension](https://github.com/microsoft/vscode/tree/main/extensions/markdown-language-features) adds a [[vs.1.7.#webview]] next to other editors in the Editor Group
-- Status Bar: The [VSCodeVim extension](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim) adds a [[vs.1.7.#status-bar-item]] in the Status Bar
+- Activity Bar: The [Azure App Service extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azureappservice) adds a [views-container](#views-container)
+- Side Bar: The built-in [NPM extension](https://github.com/microsoft/vscode/tree/main/extensions/npm) adds a [tree-view](#tree-view) to the Explorer View
+- Editor Group: The built-in [Markdown extension](https://github.com/microsoft/vscode/tree/main/extensions/markdown-language-features) adds a [webview](#webview) next to other editors in the Editor Group
+- Status Bar: The [VSCodeVim extension](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim) adds a [status-bar-item](#status-bar-item) in the Status Bar
 
 ## Views Container
 

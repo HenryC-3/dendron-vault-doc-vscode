@@ -80,7 +80,7 @@ Quick Fixes are suggested edits that address simple coding errors. Example Quick
 * Removing unreachable code or unused imports
 * Declaring
 
-When you move your cursor on to a TypeScript error, VS Code shows a light bulb that indicates that Quick Fixes are available. Click the light bulb or press `kb(editor.action.quickFix)` to show a list of available Quick Fixes and [[vs.1.7.#refactoring]].
+When you move your cursor on to a TypeScript error, VS Code shows a light bulb that indicates that Quick Fixes are available. Click the light bulb or press `kb(editor.action.quickFix)` to show a list of available Quick Fixes and [refactoring](#refactoring).
 
 ## Unused variables and unreachable code
 

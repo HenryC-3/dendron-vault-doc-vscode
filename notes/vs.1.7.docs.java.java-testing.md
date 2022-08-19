@@ -44,7 +44,7 @@ The [Test Runner for Java](https://marketplace.visualstudio.com/items?itemName=v
 
 ## Project Setup
 
-> **Note**: If you have already setup your Java test framework in your project, you can skip to the [[vs.1.7.#features]] section.
+> **Note**: If you have already setup your Java test framework in your project, you can skip to the [features](#features) section.
 
 ### Enable testing and adding test framework JARs to your project
 
@@ -87,7 +87,7 @@ dependencies {
 
 #### Unmanaged folder
 
-If your project does not use any build tools, you can enable JUnit 4 via the [[vs.1.7.#enable-testing-and-adding-test-framework-jars-to-your-project]] or by manually downloading the following JARs and adding them to the project classpath (via setting `java.project.referencedLibraries`, check [[vs.1.7.docs.java.java-project.md#dependency-management]] for more information):
+If your project does not use any build tools, you can enable JUnit 4 via the [enable-testing-and-adding-test-framework-jars-to-your-project](#enable-testing-and-adding-test-framework-jars-to-your-project) or by manually downloading the following JARs and adding them to the project classpath (via setting `java.project.referencedLibraries`, check [[vs.1.7.docs.java.java-project.md#dependency-management]] for more information):
 
 - [junit.jar](https://search.maven.org/search?q=g:junit%20AND%20a:junit)
 - [hamcrest-core.jar](https://search.maven.org/artifact/org.hamcrest/hamcrest-core/1.3/jar)
@@ -100,7 +100,7 @@ The JUnit 5 team provides a collection of sample projects with different build t
 
 #### Unmanaged folder
 
-If your project does not use any build tools, you can enable JUnit 5 via the [[vs.1.7.#enable-testing-and-adding-test-framework-jars-to-your-project]] or by manually including the [junit-platform-console-standalone](https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/) JAR in the project classpath (via setting `java.project.referencedLibraries`, check [[vs.1.7.docs.java.java-project.md#dependency-management]] for more information).
+If your project does not use any build tools, you can enable JUnit 5 via the [enable-testing-and-adding-test-framework-jars-to-your-project](#enable-testing-and-adding-test-framework-jars-to-your-project) or by manually including the [junit-platform-console-standalone](https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/) JAR in the project classpath (via setting `java.project.referencedLibraries`, check [[vs.1.7.docs.java.java-project.md#dependency-management]] for more information).
 
 ### TestNG
 
@@ -133,7 +133,7 @@ dependencies {
 
 #### Unmanaged folder
 
-If your project does not use any build tools, you can enable TestNG via the [[vs.1.7.#enable-testing-and-adding-test-framework-jars-to-your-project]] or by manually downloading the following JARs and adding them to the project classpath (via setting `java.project.referencedLibraries`, check [[vs.1.7.docs.java.java-project.md#dependency-management]] for more information):
+If your project does not use any build tools, you can enable TestNG via the [enable-testing-and-adding-test-framework-jars-to-your-project](#enable-testing-and-adding-test-framework-jars-to-your-project) or by manually downloading the following JARs and adding them to the project classpath (via setting `java.project.referencedLibraries`, check [[vs.1.7.docs.java.java-project.md#dependency-management]] for more information):
 
 - [testng.jar](https://search.maven.org/search?q=g:org.testng%20AND%20a:testng)
 - [jcommander.jar](https://search.maven.org/search?q=g:com.beust%20AND%20a:jcommander)

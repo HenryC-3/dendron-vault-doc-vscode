@@ -96,7 +96,7 @@ Once you have installed VS Code, these topics will help you learn more about VS 
 
 ### Why do I see "Visual Studio Code would like access to your calendar."
 
-If you are running macOS Mojave version, you may see dialogs saying "Visual Studio Code would like to access your {calendar/contacts/photos}." This is due to the new privacy protections in Mojave [[vs.1.7.#mojave-privacy-protections]]. It is fine to choose **Don't Allow** since VS Code does not need access to those folders.
+If you are running macOS Mojave version, you may see dialogs saying "Visual Studio Code would like to access your {calendar/contacts/photos}." This is due to the new privacy protections in Mojave [mojave-privacy-protections](#mojave-privacy-protections). It is fine to choose **Don't Allow** since VS Code does not need access to those folders.
 
 ### VS Code fails to update
 

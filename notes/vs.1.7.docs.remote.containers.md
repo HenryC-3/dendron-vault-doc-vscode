@@ -15,7 +15,7 @@ DateApproved: 8/4/2022
 ---
 # Developing inside a Container
 
-The **Visual Studio Code Remote - Containers** extension lets you use a [Docker container](https://docker.com) as a full-featured development environment. It allows you to open any folder inside (or mounted into) a container and take advantage of Visual Studio Code's full feature set. A [[vs.1.7.#create-a-devcontainerjson-file]] in your project tells VS Code how to access (or create) a **development container** with a well-defined tool and runtime stack. This container can be used to run an application or to separate tools, libraries, or runtimes needed for working with a codebase.
+The **Visual Studio Code Remote - Containers** extension lets you use a [Docker container](https://docker.com) as a full-featured development environment. It allows you to open any folder inside (or mounted into) a container and take advantage of Visual Studio Code's full feature set. A [create-a-devcontainerjson-file](#create-a-devcontainerjson-file) in your project tells VS Code how to access (or create) a **development container** with a well-defined tool and runtime stack. This container can be used to run an application or to separate tools, libraries, or runtimes needed for working with a codebase.
 
 Workspace files are mounted from the local file system or copied or cloned into the container. Extensions are installed and run inside the container, where they have full access to the tools, platform, and file system. This means that you can seamlessly switch your entire development environment just by connecting to a different container.
 
@@ -76,7 +76,7 @@ To get started, follow these steps:
 Here are two tips to consider:
 
 * If you are working with the same repository both locally in Windows and inside a container, be sure to set up consistent line endings. See [[vs.1.7.docs.remote.troubleshooting.md#resolving-git-line-ending-issues-in-containers-resulting-in-many-modified-files]] for details.
-* If you clone using a Git credential manager, your container should already have access to your credentials! If you use SSH keys, you can also opt in to sharing them. See [[vs.1.7.#sharing-git-credentials-with-your-container]] for details.
+* If you clone using a Git credential manager, your container should already have access to your credentials! If you use SSH keys, you can also opt in to sharing them. See [sharing-git-credentials-with-your-container](#sharing-git-credentials-with-your-container) for details.
 
 ### Working with Containers
 
@@ -111,7 +111,7 @@ This quick start covers how to set up a dev container for an existing project to
 
     The list will be automatically sorted based on the contents of the folder you open.
 
-    You may be able to customize your dev container with additional features, which [[vs.1.7.#dev-container-features-preview]].
+    You may be able to customize your dev container with additional features, which [dev-container-features-preview](#dev-container-features-preview).
 
     The dev container definitions displayed come from the [vscode-dev-containers repository](https://aka.ms/vscode-dev-containers). You can browse the `containers` folder of that repository to see the contents of each definition.
 
@@ -125,7 +125,7 @@ This quick start covers how to set up a dev container for an existing project to
 
 You can now interact with your project in VS Code just as you could when opening the project locally. From now on, when you open the project folder, VS Code will automatically pick up and reuse your dev container configuration.
 
-> **Tip:** Want to use a remote Docker host? See the section on [[vs.1.7.#open-a-folder-on-a-remote-ssh-host-in-a-container]] for information.
+> **Tip:** Want to use a remote Docker host? See the section on [open-a-folder-on-a-remote-ssh-host-in-a-container](#open-a-folder-on-a-remote-ssh-host-in-a-container) for information.
 
 While using this approach to [bind mount](https://docs.docker.com/storage/bind-mounts/) the local filesystem into a container is convenient, it does have some performance overhead on Windows and macOS. There are [[vs.1.7.remote.advancedcontainers.improve-performance]] that you can apply to improve disk performance, or you can [[v[[vs.1.7.#quick-start-open-a-git-repository-or-github-pr-in-an-isolated-container-volume]]stead.
 
@@ -148,7 +148,7 @@ To do so:
 
 1. Follow the [[vs.1.7.docs.remote.ssh.md#installation]] and SSH [[vs.1.7.docs.remote.ssh.md#ssh-host-setup]] steps for the Remote - SSH extension.
 1. **Optional:** Set up SSH [[vs.1.7.docs.remote.troubleshooting.md#configuring-key-based-authentication]] to the server so you do not need to enter your password multiple times.
-1. [[vs.1.7.#installation]] on your SSH host. You do not need to install Docker locally.
+1. [installation](#installation) on your SSH host. You do not need to install Docker locally.
 1. Follow the [[vs.1.7.docs.remote.ssh.md#connect-to-a-remote-host]] for the Remote - SSH extension to connect to a host and open a folder there.
 1. Use the **Remote-Containers: Reopen in Container** command from the Command Palette (`kbstyle(F1)`, `kb(workbench.action.showCommands)`).
 
@@ -169,7 +169,7 @@ Also note that, while you cannot use multiple containers for the same workspace 
 
 ## Quick start: Open a Git repository or GitHub PR in an isolated container volume
 
-While you can [[vs.1.7.#quick-start-open-an-existing-folder-in-a-container]], you may want to work with an isolated copy of a repository for a PR review or to investigate another branch without impacting your work.
+While you can [quick-start-open-an-existing-folder-in-a-container](#quick-start-open-an-existing-folder-in-a-container), you may want to work with an isolated copy of a repository for a PR review or to investigate another branch without impacting your work.
 
 Repository Containers use isolated, local Docker volumes instead of binding to the local filesystem. In addition to not polluting your file tree, local volumes have the added benefit of improved performance on Windows and macOS. (See Advanced Configuration [[vs.1.7.remote.advancedcontainers.improve-performance]] article for information on how to use these types of volumes in other scenarios.)
 
@@ -181,7 +181,7 @@ For example, follow these steps to open one of the "try" repositories in a Repos
 
     ![Input box with a repository name in it](/assets/vscode-remote-try-node-gacrrt11196i.png)
 
-    > **Tip:** If you choose a private repository, you may want to setup a credential manager or add your SSH keys to your SSH agent. See [[vs.1.7.#sharing-git-credentials-with-your-container]].
+    > **Tip:** If you choose a private repository, you may want to setup a credential manager or add your SSH keys to your SSH agent. See [sharing-git-credentials-with-your-container](#sharing-git-credentials-with-your-container).
 
 3. If your repository does not have a `.devcontainer/devcontainer.json` file in it, you'll be asked to pick a starting point from a filterable list or an existing [Dockerfile](https://docs.docker.com/engine/reference/builder/) or [Docker Compose file](https://docs.docker.com/compose/compose-file/#compose-file-structure-and-examples) (if one exists).
 
@@ -203,7 +203,7 @@ For example, follow these steps to open one of the "try" repositories in a Repos
 
 Note that if the container fails to come up due to something like a Docker build error, you can select **Reopen in Recovery Container** in the dialog that appears to go into a "recovery container" that allows you to edit your Dockerfile or other content. This opens the docker volume with the cloned repository in a minimal container and shows you the creation log. Once you are done fixing, use **Reopen in Container** to retry.
 
-> **Tip:** Want to use a remote Docker host? See the section on [[vs.1.7.#open-a-folder-on-a-remote-ssh-host-in-a-container]] for information.
+> **Tip:** Want to use a remote Docker host? See the section on [open-a-folder-on-a-remote-ssh-host-in-a-container](#open-a-folder-on-a-remote-ssh-host-in-a-container) for information.
 
 ## Trusting your Workspace
 
@@ -213,7 +213,7 @@ The Remote - Containers extension has adopted Workspace Trust. Depending on how 
 
 ### Reopen folder in container
 
-[[vs.1.7.#quick-start-open-an-existing-folder-in-a-container]] requires trusting the local (or WSL) folder. You will be asked to trust the local (or WSL) folder before the window reloads.
+[quick-start-open-an-existing-folder-in-a-container](#quick-start-open-an-existing-folder-in-a-container) requires trusting the local (or WSL) folder. You will be asked to trust the local (or WSL) folder before the window reloads.
 
 There are a couple of exceptions to this flow:
 
@@ -228,13 +228,13 @@ When [[vs.1.7.docs.remote.attach-container]], you will be asked to confirm that 
 
 ### Clone repository in a volume
 
-When [[vs.1.7.#quick-start-open-a-git-repository-or-github-pr-in-an-isolated-container-volume]], you are asked to confirm that cloning a repository means you trust the repository. This is only confirmed once.
+When [quick-start-open-a-git-repository-or-github-pr-in-an-isolated-container-volume](#quick-start-open-a-git-repository-or-github-pr-in-an-isolated-container-volume), you are asked to confirm that cloning a repository means you trust the repository. This is only confirmed once.
 
 ![Workspace trust prompt when cloning in container volume](/assets/clone-containers-trust-agthnfmy77me.png)
 
 ### Inspect volume
 
-[[vs.1.7.#inspecting-volumes]] starts in [[vs.1.7.docs.editor.workspace-trust.md#restricted-mode]], and you can trust the folder inside the container.
+[inspecting-volumes](#inspecting-volumes) starts in [[vs.1.7.docs.editor.workspace-trust.md#restricted-mode]], and you can trust the folder inside the container.
 
 ### Docker daemon running remotely
 
@@ -660,7 +660,7 @@ A VS Code window can only connect to one window currently, but you can open a ne
 
 ### Can I work with containers on a remote host?
 
-Yes, see the section on [[vs.1.7.#open-a-folder-on-a-remote-ssh-host-in-a-container]] for information.
+Yes, see the section on [open-a-folder-on-a-remote-ssh-host-in-a-container](#open-a-folder-on-a-remote-ssh-host-in-a-container) for information.
 
 ### How can I build or deploy container images into my local Docker / Kubernetes install when working inside a container?
 

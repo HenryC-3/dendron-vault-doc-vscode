@@ -125,7 +125,7 @@ To add a new configuration to an existing `launch.json`, use one of the followin
 
 ![launch json suggestions](/assets/add-config-riwxeeojy7ie.gif)
 
-VS Code also supports compound launch configurations for starting multiple configurations at the same time; for more details, please read this [[vs.1.7.#compound-launch-configurations]].
+VS Code also supports compound launch configurations for starting multiple configurations at the same time; for more details, please read this [compound-launch-configurations](#compound-launch-configurations).
 
 In order to start a debug session, first select the configuration named **Launch Program** using the **Configuration dropdown** in the **Run and Debug** view. Once you have your launch configuration set, start your debug session with `kb(workbench.action.debug.start)`.
 
@@ -225,7 +225,7 @@ Here are some optional attributes available to all launch configurations:
 * `postDebugTask` - to launch a task at the very end of a debug session, set this attribute to the name of a task specified in [[vs.1.7.docs.editor.tasks]] (in the workspace's `.vscode` folder).
 * `internalConsoleOptions` - this attribute controls the visibility of the Debug Console panel during a debugging session.
 * `debugServer` - **for debug extension authors only**: this attribute allows you to connect to a specified port instead of launching the debug adapter.
-* `serverReadyAction` - if you want to open a URL in a web browser whenever the program under debugging outputs a specific message to the debug console or integrated terminal. For details see section [[vs.1.7.#automatically-open-a-uri-when-debugging-a-server-program]] below.
+* `serverReadyAction` - if you want to open a URL in a web browser whenever the program under debugging outputs a specific message to the debug console or integrated terminal. For details see section [automatically-open-a-uri-when-debugging-a-server-program](#automatically-open-a-uri-when-debugging-a-server-program) below.
 
 Many debuggers support some of the following attributes:
 

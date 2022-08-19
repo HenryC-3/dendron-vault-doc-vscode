@@ -51,7 +51,7 @@ To generate a `launch.json` file with Python configurations, do the following st
 
    ![Configuration json](/assets/configuration-json-ayoll8e205nh.png)
 
-The details of configuration properties are covered later in this article under [[vs.1.7.#set-configuration-options]]. Other configurations are also described in this article under [[vs.1.7.#debugging-specific-app-types]].
+The details of configuration properties are covered later in this article under [set-configuration-options](#set-configuration-options). Other configurations are also described in this article under [debugging-specific-app-types](#debugging-specific-app-types).
 
 ## Additional configurations
 
@@ -62,7 +62,7 @@ By default, VS Code shows only the most common configurations provided by the Py
 Selecting the **Attach using Process ID** one yields the following result:
 ![Added a configuration](/assets/added-configuration-2ur2d1tvzobj.png)
 
-See [[vs.1.7.#debugging-specific-app-types]] for details on all of these configurations.
+See [debugging-specific-app-types](#debugging-specific-app-types) for details on all of these configurations.
 
 During debugging, the Status Bar shows the current configuration and the current debugging interpreter. Selecting the configuration brings up a list from which you can choose a different configuration:
 
@@ -88,7 +88,7 @@ When no configuration has been set, you'll be given a list of debugging options.
 
 Two common options are to use the **Python File** configuration to run the currently open Python file or to use the **Attach using Process ID** configuration to attach the debugger to a process that is already running.
 
-For information about creating and using debugging configurations, see the [[vs.1.7.#initialize-configurations]] and [[vs.1.7.#additional-configurations]] sections. Once a configuration is added, it can be selected from the dropdown list and started using the **Start Debugging** button.
+For information about creating and using debugging configurations, see the [initialize-configurations](#initialize-configurations) and [additional-configurations](#additional-configurations) sections. Once a configuration is added, it can be selected from the dropdown list and started using the **Start Debugging** button.
 
 ![Start debugging](/assets/debug-start-button-fqw9put4pn13.png)
 
@@ -347,7 +347,7 @@ Identifies the type of debugger to use; leave this set to `python` for Python co
 Specifies the mode in which to start debugging:
 
 - `launch`: start the debugger on the file specified in `program`
-- `attach`: attach the debugger to an already running process. See [[vs.1.7.#remote-script-debugging-with-ssh]] for an example.
+- `attach`: attach the debugger to an already running process. See [remote-script-debugging-with-ssh](#remote-script-debugging-with-ssh) for an example.
 
 ### `program`
 
@@ -504,9 +504,9 @@ The configuration dropdown provides various different options for general app ty
 
 | Configuration | Description |
 | --- | --- |
-| Attach | See [[vs.1.7.#debugging-by-attaching-over-a-network-connection]] in the previous section. |
+| Attach | See [debugging-by-attaching-over-a-network-connection](#debugging-by-attaching-over-a-network-connection) in the previous section. |
 | Django | Specifies `"program": "${workspaceFolder}/manage.py"`, `"args": ["runserver"]`. Also adds `"django": true` to enable debugging of Django HTML templates. |
-| Flask | See [[vs.1.7.#flask-debugging]] below. |
+| Flask | See [flask-debugging](#flask-debugging) below. |
 | Gevent | Adds `"gevent": true` to the standard integrated terminal configuration. |
 | Pyramid | Removes `program`, adds `"args": ["${workspaceFolder}/development.ini"]`, adds `"jinja": true` for enabling template debugging, and adds `"pyramid": true` to ensure that the program is launched with [the necessary `pserve` command](https://docs.pylonsproject.org/projects/pyramid/en/latest/narr/startup.html?highlight=pserve). |
 | Scrapy | Specifies `"module": "scrapy"` and adds `"args": ["crawl", "specs", "-o", "bikes.json"]`. |

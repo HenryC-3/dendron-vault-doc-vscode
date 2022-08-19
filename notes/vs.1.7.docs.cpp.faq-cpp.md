@@ -15,19 +15,19 @@ MetaDescription: Frequently asked questions about the C/C++ extension in Visual 
 ---
 # Frequently asked questions
 
-- [[vs.1.7.#why-are-my-files-corrupted-on-format]]
-- [[vs.1.7.#how-do-i-get-intellisense-to-work-correctly]]
-- [[vs.1.7.#why-do-i-see-red-squiggles-under-standard-library-types]]
-- [[vs.1.7.#how-do-i-get-the-new-intellisense-to-work-with-mingw-on-windows]]
-- [[vs.1.7.#how-do-i-get-the-new-intellisense-to-work-with-the-windows-subsystem-for-linux]]
-- [[vs.1.7.#what-is-the-difference-between-includepath-and-browsepath]]
-- [[vs.1.7.#how-do-i-recreate-the-intellisense-database]]
-- [[vs.1.7.#what-is-the-ipch-folder]]
-- [[vs.1.7.#how-do-i-disable-the-intellisense-cache-ipch]]
-- [[vs.1.7.#how-do-i-set-up-debugging]]
-- [[vs.1.7.#how-do-i-enable-debug-symbols]]
-- [[vs.1.7.#why-is-debugging-not-working]]
-- [[vs.1.7.#what-do-i-do-if-i-suspect-a-cc-extension-problem]]
+- [why-are-my-files-corrupted-on-format](#why-are-my-files-corrupted-on-format)
+- [how-do-i-get-intellisense-to-work-correctly](#how-do-i-get-intellisense-to-work-correctly)
+- [why-do-i-see-red-squiggles-under-standard-library-types](#why-do-i-see-red-squiggles-under-standard-library-types)
+- [how-do-i-get-the-new-intellisense-to-work-with-mingw-on-windows](#how-do-i-get-the-new-intellisense-to-work-with-mingw-on-windows)
+- [how-do-i-get-the-new-intellisense-to-work-with-the-windows-subsystem-for-linux](#how-do-i-get-the-new-intellisense-to-work-with-the-windows-subsystem-for-linux)
+- [what-is-the-difference-between-includepath-and-browsepath](#what-is-the-difference-between-includepath-and-browsepath)
+- [how-do-i-recreate-the-intellisense-database](#how-do-i-recreate-the-intellisense-database)
+- [what-is-the-ipch-folder](#what-is-the-ipch-folder)
+- [how-do-i-disable-the-intellisense-cache-ipch](#how-do-i-disable-the-intellisense-cache-ipch)
+- [how-do-i-set-up-debugging](#how-do-i-set-up-debugging)
+- [how-do-i-enable-debug-symbols](#how-do-i-enable-debug-symbols)
+- [why-is-debugging-not-working](#why-is-debugging-not-working)
+- [what-do-i-do-if-i-suspect-a-cc-extension-problem](#what-do-i-do-if-i-suspect-a-cc-extension-problem)
 
 ## Why are my files corrupted on format?
 
@@ -137,11 +137,11 @@ Symbols are located in the `*.pdb` file.
 
 ### My breakpoints aren't being hit
 
-When you start debugging, if your breakpoints aren't bound (solid red circle) or they are not being hit, you may need to enable [[vs.1.7.#how-do-i-enable-debug-symbols]] during compilation.
+When you start debugging, if your breakpoints aren't bound (solid red circle) or they are not being hit, you may need to enable [how-do-i-enable-debug-symbols](#how-do-i-enable-debug-symbols) during compilation.
 
 ### Debugging starts but all the lines in my stack trace are grey
 
-If your debugger is showing a grey stack trace, won't stop at a breakpoint, or the symbols in the call stack are grey, then your executable was compiled without [[vs.1.7.#how-do-i-enable-debug-symbols]].
+If your debugger is showing a grey stack trace, won't stop at a breakpoint, or the symbols in the call stack are grey, then your executable was compiled without [how-do-i-enable-debug-symbols](#how-do-i-enable-debug-symbols).
 
 ## What do I do if I suspect a C/C++ extension problem
 
